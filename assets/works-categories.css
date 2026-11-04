@@ -1,0 +1,45 @@
+/* Approved centered overview, preserving the original right stage. */
+#view-works{max-width:1512px;padding-left:44px;padding-right:44px}
+#view-works .works-stage-grid{grid-template-columns:330px minmax(0,1fr);gap:32px}
+#view-works .works-editorial-index{transform:none}
+#view-works .works-index-heading{font-size:54px;margin-bottom:20px}
+.works-category-tabs{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 18px;flex:none}
+.works-category-tabs .filter-pill{font-family:'Microsoft YaHei','PingFang SC',sans-serif;font-size:10px;font-weight:600;border:1px solid #ddd;background:#fff;color:#555;border-radius:999px;padding:8px 10px;cursor:pointer;line-height:1.4;transition:background .22s,color .22s,transform .22s}
+.works-category-tabs .filter-pill.active{background:#111;color:#fff;border-color:#111}
+.works-category-tabs .filter-pill:hover{background:#ff6418;color:#111;border-color:#ff6418}
+.works-category-tabs .filter-pill:focus-visible{outline:2px solid #3248a8;outline-offset:3px}
+#view-works .works-thumb-stack{grid-template-rows:repeat(var(--visible-work-count,4),minmax(140px,1fr));overflow-y:auto;overflow-x:hidden;scrollbar-width:thin}
+#view-works .work-thumb-card{grid-template-columns:86px minmax(0,1fr);gap:12px;min-height:140px}
+#view-works .work-thumb-mini-num{font-size:58px}
+#view-works .work-thumb-meta .wt-title{font-size:17px}
+.about-contact-strip{border-top:2px solid #111;padding:26px 0;margin:0 0 54px;display:grid;grid-template-columns:1fr 140px;gap:35px;align-items:center;scroll-margin-top:40px}
+.about-contact-strip h2{font-size:23px;margin:0 0 20px}.about-contact-strip>img{width:140px;height:140px;object-fit:contain}
+.about-contact-values{display:grid;gap:12px}.about-contact-values>div{display:grid;grid-template-columns:40px minmax(0,1fr) auto;max-width:650px;gap:12px;align-items:center;font-size:14px}.about-contact-values span{color:#888}.about-contact-values strong{font-weight:500}.about-contact-values button{font-family:'Microsoft YaHei',sans-serif;border:0;border-radius:999px;background:#111;color:#fff;font-size:11px;padding:8px 13px;cursor:pointer}.about-contact-values button:hover{background:#ff7a1a;color:#111}
+@media(max-width:1100px){#view-works{padding-left:32px;padding-right:32px}#view-works .works-stage-grid{grid-template-columns:290px minmax(0,1fr);gap:24px}#view-works .works-index-heading{font-size:47px}.works-category-tabs{gap:6px}#view-works .work-thumb-card{grid-template-columns:72px minmax(0,1fr)}#view-works .work-thumb-mini-num{font-size:49px}}
+@media(max-width:700px){#view-works{height:auto;max-height:none;overflow:visible;padding:24px 22px 40px}#view-works .works-stage-grid{grid-template-columns:1fr;gap:28px}#view-works .works-index-heading{font-size:44px}#view-works .works-thumb-stack{grid-template-rows:none;grid-auto-rows:auto;max-height:290px;flex:none}#view-works .work-thumb-card{min-height:100px}#view-works .works-bigshot-stage{min-height:500px}.about-contact-strip{grid-template-columns:1fr}.about-contact-strip>img{justify-self:center}.about-contact-values>div{grid-template-columns:34px minmax(0,1fr)}.about-contact-values button{grid-column:2;justify-self:start}.about-contact-values strong{overflow-wrap:anywhere;font-size:13px}}
+@media(prefers-reduced-motion:reduce){.works-category-tabs .filter-pill{transition:none}}
+
+/* Replay content entrance after every category change. */
+@keyframes category-content-reveal{from{opacity:0;translate:0 32px}to{opacity:1;translate:0 0}}
+@keyframes category-art-reveal{from{opacity:0;scale:.965;translate:0 20px}to{opacity:1;scale:1;translate:0 0}}
+#view-works.active.category-entering .work-thumb-card{animation:category-content-reveal 1.1s var(--ease-out) both;animation-delay:calc(.12s + var(--category-row-delay,0s))}
+#view-works.active.category-entering .work-thumb-card:nth-child(2){--category-row-delay:.14s}
+#view-works.active.category-entering .work-thumb-card:nth-child(3){--category-row-delay:.28s}
+#view-works.active.category-entering .work-thumb-card:nth-child(4){--category-row-delay:.42s}
+#view-works.active.category-entering .work-thumb-card:nth-child(5){--category-row-delay:.56s}
+#view-works.active.category-entering .bigshot-visual-canvas{animation:category-art-reveal 1.25s var(--ease-out) .12s both}
+#view-works.active.category-entering .bigshot-title{animation:category-content-reveal 1s var(--ease-out) .3s both}
+#view-works.active.category-entering #worksBigshotSummary{animation:category-content-reveal 1s var(--ease-out) .44s both}
+#view-works.active.category-entering .bigshot-footer-bar>:last-child{animation:category-content-reveal 1s var(--ease-out) .58s both}
+@media(prefers-reduced-motion:reduce){#view-works.active.category-entering *{animation:none!important}}
+
+/* Clearer, larger category controls. */
+#view-works .works-category-tabs{gap:9px;margin-bottom:22px}
+#view-works .works-category-tabs .filter-pill{font-size:14px;font-weight:650;line-height:1.5;padding:10px 15px;color:#333}
+#view-works .works-category-tabs .filter-pill.active{color:#fff}
+#view-works .works-category-tabs .filter-pill:hover{color:#111}
+
+/* Keep all four enlarged category buttons on one row. */
+#view-works .works-category-tabs{flex-wrap:nowrap;gap:6px}
+#view-works .works-category-tabs .filter-pill{padding:10px 8px;white-space:nowrap;flex-shrink:0}
+@media(max-width:1100px){#view-works .works-category-tabs{gap:4px}#view-works .works-category-tabs .filter-pill{padding-left:4px;padding-right:4px}}

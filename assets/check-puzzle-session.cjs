@@ -1,0 +1,8 @@
+const {chromium}=require('C:/Users/ymy01/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const {pathToFileURL}=require('url'); const path=require('path');
+(async()=>{const browser=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true});const page=await browser.newPage({viewport:{width:1440,height:900}});const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto(pathToFileURL(path.resolve('yao_mingyi_portfolio.before-gutfeeling.html')).href);await page.waitForTimeout(1500);
+const initial=await page.locator('.floating-piece-wrapper').first().getAttribute('style');
+await page.evaluate(()=>{const p=document.querySelector('.floating-piece-wrapper');completeFloatingPiece(p,{slot:p.dataset.targetSlot,view:p.dataset.targetView},30,40)});await page.waitForTimeout(500);await page.evaluate(()=>navigate('home'));await page.waitForTimeout(300);
+const retained=await page.locator('.floating-piece-wrapper').first().evaluate(p=>({placed:p.classList.contains('is-placed'),x:p.style.getPropertyValue('--drag-x'),y:p.style.getPropertyValue('--drag-y')}));
+await page.locator('.floating-piece-wrapper').first().click();const clicked=await page.locator('#view-works').evaluate(el=>el.classList.contains('active'));
+await page.reload();await page.waitForTimeout(1500);const reset=await page.locator('.floating-piece-wrapper').first().evaluate(p=>!p.classList.contains('is-placed'));const changed=initial!==await page.locator('.floating-piece-wrapper').first().getAttribute('style');console.log(JSON.stringify({errors,retained,clicked,reset,changed}));await browser.close();})().catch(e=>{console.error(e);process.exit(1)});

@@ -1,0 +1,175 @@
+/* Original portfolio, with only display lettering and capsule navigation refreshed. */
+.software-skills {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 20px;
+  margin: 24px 0 8px;
+  list-style: none;
+  padding: 0;
+}
+.software-skills li { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; }
+.software-skills img { display: block; width: 64px; height: 64px; object-fit: contain; border-radius: 14px; }
+.software-skills span { font-size: 13px; font-weight: 600; color: var(--ink-primary); line-height: 1.5; }
+.personal-history-row { grid-template-columns: 190px minmax(230px, 1fr) minmax(180px, 1.3fr) auto; }
+.personal-history-row .tl-role, .personal-history-row .tl-impact { line-height: 1.7; }
+@media (max-width: 900px) {
+  .personal-history-row { grid-template-columns: 1fr auto; gap: 8px 16px; }
+  .personal-history-row .tl-period { grid-column: 1; }
+  .personal-history-row .tl-role, .personal-history-row .tl-impact { grid-column: 1; }
+  .personal-history-row .tl-metric { grid-column: 2; grid-row: 1 / 4; }
+}
+@media (max-width: 700px) {
+  .software-skills { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px 12px; }
+  .software-skills img { width: 52px; height: 52px; }
+}
+@font-face {
+  font-family: 'Name Youth Black';
+  src: local('摇醒青年黑'), local('摇醒青年黑体');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Portfolio Display';
+  src: url('./fonts/bowlby-one-400.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+.brand-mark,
+.sketch-portfolio-title {
+  font-family: 'Portfolio Display', 'Arial Black', sans-serif;
+  font-weight: 400;
+}
+.brand-mark {
+  display: inline-block;
+  transition: transform .35s var(--ease-spring);
+}
+.brand-logo:hover .brand-mark { transform: rotate(-4deg); }
+.sketch-portfolio-title {
+  font-size: clamp(78px, 10.8vw, 156px);
+  letter-spacing: -.02em;
+  margin-bottom: 28px;
+}
+.handdrawn-hero-cluster {
+  top: clamp(-100px, -11vh, -48px);
+}
+.sketch-portfolio-title .puzzle-letter-span { margin-right: -.035em; }
+.sketch-portfolio-title .puzzle-letter-span:last-child { margin-right: 0; }
+.sketch-hero-greeting {
+  font-family: 'Name Youth Black', '摇醒青年黑', '摇醒青年黑体', var(--font-display);
+  top: 0;
+  margin-bottom: 0;
+  font-size: clamp(30px, 3.5vw, 50px);
+  font-weight: 800;
+  letter-spacing: .06em;
+}
+.sketch-hero-instruction {
+  top: 0;
+  margin-top: 54px;
+  font-size: clamp(14px, 1.15vw, 17px);
+  color: var(--ink-muted);
+}
+.sketch-hero-greeting > span {
+  display: inline-block;
+  padding: .08em .22em .14em;
+  background: #ff7a1a;
+  color: #fff;
+  line-height: 1.3;
+  border: 0;
+  border-radius: .45em;
+  box-shadow: none;
+  clip-path: none;
+  transform: none;
+  transition: none;
+}
+.sketch-hero-greeting > span::after { content: none; }
+#view-home.active .sketch-hero-greeting { animation: none; }
+.main-nav { gap: 16px; }
+.site-header .header-left {
+  scale: 1.1;
+  transform-origin: left center;
+}
+.site-header .main-nav {
+  scale: 1.1;
+  transform-origin: right center;
+}
+.nav-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: background .2s, color .2s, transform .35s var(--ease-spring);
+}
+.nav-item::after { display: none; }
+.nav-item:hover { background: #ffe14d; color: var(--ink-primary); transform: rotate(-3deg); }
+.nav-item.active { background: var(--ink-primary); color: #fff; }
+.nav-item:active { transform: rotate(-1deg) scale(.96); }
+.back-home-pill {
+  border-radius: 999px;
+  transition: background .2s, color .2s, transform .35s var(--ease-spring);
+}
+.back-home-pill:hover { background: #ffe14d; color: var(--ink-primary); transform: rotate(-3deg); }
+.floating-piece-wrapper.is-dragging { transition: none !important; }
+.home-active.puzzle-page-transition .site-header {
+  display: flex;
+  animation: puzzle-header-reveal .5s ease both;
+}
+.puzzle-transition-veil {
+  position: fixed;
+  inset: 0;
+  z-index: 301;
+  background: transparent;
+}
+.puzzle-transition-flyer { animation: none !important; }
+.puzzle-transition-flyer .floating-piece-inner { filter: drop-shadow(0 8px 12px rgba(0,0,0,.13)); }
+@keyframes puzzle-header-reveal {
+  from { opacity: 0; translate: 0 -12px; }
+  to { opacity: 1; translate: 0 0; }
+}
+.floating-piece--contact {
+  --piece-color: #F00078;
+  --piece-glow: rgba(240, 0, 120, .18);
+}
+.floating-piece--contact .floating-piece-svg g > text:first-of-type {
+  fill: #fff;
+  stroke: none;
+}
+.floating-piece-svg g > text:first-of-type {
+  text-anchor: middle;
+  dominant-baseline: central;
+  fill: #fff;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  paint-order: stroke fill;
+  stroke: rgba(0, 0, 0, .28);
+  stroke-width: 1.2px;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+.floating-piece--about .floating-piece-svg g > text:first-of-type {
+  font-size: 20px;
+  letter-spacing: .5px;
+}
+.floating-piece-wrapper.is-dragging .floating-piece-inner {
+  filter: drop-shadow(0 5px 8px rgba(0,0,0,.15));
+  transition: none;
+}
+@media (max-width: 600px) {
+  .handdrawn-hero-cluster { top: clamp(-140px, -17vh, -80px); }
+  .sketch-portfolio-title { margin-bottom: 22px; }
+  .sketch-hero-instruction { margin-top: 38px; }
+  #view-home .sketch-hero-greeting { font-size: clamp(24px, 5.8vw, 33px); }
+  .site-header .header-left, .site-header .main-nav { scale: 1; }
+  .sketch-portfolio-title { font-size: clamp(48px, 11.6vw, 78px); }
+  .site-header { padding-inline: 12px; gap: 8px; }
+  .header-left { gap: 6px; }
+  .brand-mark { font-size: 16px; }
+  .back-home-pill { font-size: 11px; padding: 6px 8px; white-space: nowrap; }
+  .main-nav { gap: 6px; }
+  .nav-item { padding: 8px 7px; font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-item, .back-home-pill, .brand-mark { transition: none; }
+}

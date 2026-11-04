@@ -1,0 +1,64 @@
+/* Approved homepage preview, without the three corner captions. */
+#view-home { background: #fff; }
+.home-title-block { position: absolute; left: 4.6%; top: 19.6%; right: 4%; }
+#view-home .sketch-portfolio-title {
+  display: flex;
+  width: max-content;
+  font-family: 'Portfolio Display', 'Arial Black', sans-serif;
+  font-weight: 400;
+  font-size: clamp(80px, 12.22vw, 210px);
+  line-height: 1;
+  letter-spacing: -.034em;
+  margin: 0;
+}
+#view-home .puzzle-letter-span { margin-right: 0; }
+#view-home .puzzle-letter-span {
+  color: #111;
+  transition: color .2s ease, transform .25s var(--ease-spring);
+}
+#view-home .puzzle-letter-span:nth-child(3n + 1):hover { color: #ff7a1a; }
+#view-home .puzzle-letter-span:nth-child(3n + 2):hover { color: #246bfd; }
+#view-home .puzzle-letter-span:nth-child(3n):hover { color: #f00078; }
+.home-design-directions { margin-top: 26px; color: #888; font: 12px var(--font-mono); letter-spacing: 2px; }
+.home-intro-block { position: absolute; left: 4.7%; top: 51%; }
+#view-home .sketch-hero-greeting { top: 0; margin: 0; font-size: clamp(25px, 3.06vw, 50px); font-weight: 800; letter-spacing: 2px; }
+#view-home .sketch-hero-greeting > span { padding: 13px 24px 17px; background: #ff7a1a; color: white; border-radius: 24px; }
+.home-personal-statement { margin: 27px 0 0; font-size: clamp(16px, 1.32vw, 22px); line-height: 1.9; }
+#view-home .sketch-hero-instruction { top: 0; margin: 64px 0 0; font-size: 13px; letter-spacing: 0; color: #888; }
+#view-home .sketch-hero-instruction > span { color: #3248a8; font-size: 21px; margin-right: 8px; }
+#view-home .floating-piece-wrapper,
+.home-puzzle-slot { position: absolute; width: clamp(160px, 16vw, 270px); aspect-ratio: 1; }
+.home-puzzle-slot { pointer-events: none; }
+.home-puzzle-slot svg { width: 100%; height: 100%; overflow: visible; }
+.home-puzzle-slot .puzzle-board-slot > path:first-child { fill: #fcfcfc; stroke: #ddd; stroke-width: 1.5; }
+.home-puzzle-slot .puzzle-board-slot.is-matching > path:first-child { fill: var(--slot-color); fill-opacity: .12; stroke: var(--slot-color); }
+.home-slot--works { left: 44%; top: 47%; --slot-color: #ff7a1a; }
+.home-slot--about { left: 64%; top: 50%; --slot-color: #246bfd; }
+.home-slot--contact { left: 82%; top: 68%; --slot-color: #f00078; }
+#view-home .floating-piece-inner { filter: drop-shadow(0 5px 9px rgba(0,0,0,.1)); }
+#view-home .floating-piece-svg g > text:first-of-type { font-size: 23px; letter-spacing: .5px; fill: #fff; stroke: none; font-weight: 800; }
+#view-home .floating-piece--works { --piece-color: #ff7a1a; }
+#view-home .floating-piece--about { --piece-tilt: 3deg; }
+#view-home .floating-piece--contact { --piece-tilt: -3deg; }
+#view-home .floating-piece--works { --piece-tilt: -4deg; }
+#view-home .floating-piece-wrapper.is-placed { --piece-tilt: 0deg; }
+@media (max-height: 720px) and (min-width: 701px) {
+  .home-title-block { top: 13%; }
+  #view-home .sketch-portfolio-title { font-size: 11vw; }
+  .home-intro-block { top: 48%; }
+  #view-home .sketch-hero-instruction { margin-top: 30px; }
+}
+@media (max-width: 700px) {
+  .home-title-block { top: 14%; left: 6%; }
+  #view-home .sketch-portfolio-title { font-size: 11.8vw; }
+  .home-design-directions { font-size: 9px; margin-top: 18px; }
+  .home-intro-block { left: 6%; top: 29%; }
+  #view-home .sketch-hero-greeting { font-size: 6vw; }
+  #view-home .sketch-hero-greeting > span { padding: 10px 14px; border-radius: 17px; }
+  .home-personal-statement { font-size: 15px; margin-top: 18px; }
+  #view-home .sketch-hero-instruction { font-size: 11px; margin-top: 18px; }
+  #view-home .floating-piece-wrapper, .home-puzzle-slot { width: 32vw; }
+  .home-slot--works { left: 5%; top: 61%; }
+  .home-slot--about { left: 36%; top: 60%; }
+  .home-slot--contact { left: 65%; top: 76%; }
+}

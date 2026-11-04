@@ -1,0 +1,96 @@
+/* Hints that the page is playable. html[data-hint] picks the style: peel, note or nudge. */
+
+/* ---- peel: a couple of stickers are coming unstuck at one corner, and any piece curls up under the cursor ----
+   The piece itself is clipped along the fold, so the corner that lifted is see-through and shows whatever is underneath;
+   the flap (the sticker's paper back) is drawn in the corner square above the fold. --pc is the fold size. */
+@property --pc{syntax:"<length>";inherits:true;initial-value:0px}
+/* The fold is a clip-path, and only pieces with a corner up carry one (lifted at rest, under the cursor, or folding back:
+   hints.js adds .curl while --pc animates). A clip-path on every piece at rest made iPhone scrolling rough. */
+[data-hint~="peel"] :is(.press,.svc,.svc2,.tag,.peel,.tile,.block){--pc:0px;
+  transition-property:translate,rotate,scale,box-shadow,--pc;transition-duration:.7s,.35s,.25s,.25s,.35s;transition-timing-function:cubic-bezier(.3,1.5,.5,1),ease,ease,ease,cubic-bezier(.3,1.5,.5,1)}
+[data-hint~="peel"] :is(.press,.svc,.svc2,.tag,.peel,.tile,.block):is(.unstuck,.curl,.peeled){
+  clip-path:polygon(-60px -60px,calc(100% + 60px) -60px,calc(100% + 60px) calc(100% + 2*var(--ring,0px) - var(--pc) - 60px),calc(100% + 2*var(--ring,0px) - var(--pc) - 60px) calc(100% + 60px),-60px calc(100% + 60px))}
+[data-hint~="peel"] :is(.press,.svc,.svc2,.tag,.peel)::after,
+[data-hint~="peel"] :is(.tile,.block)::before{content:"";position:absolute;right:-3px;bottom:-3px;width:var(--pc);height:var(--pc);pointer-events:none;
+  background:linear-gradient(135deg,#f4f1ea 0,#fff 42%,#dcd8cf 50%,transparent 51%);
+  border-top-left-radius:6px;filter:drop-shadow(-2px -2px 2px rgba(14,14,14,.18))}
+/* "nonsense." has its white edge as a box-shadow ring outside the box, so the fold and the flap sit out at the ring */
+/* That white edge sits on a white page, so a thin grey die-cut line shows where it ends, and the flap is a greyer paper
+   back with a hairline of its own. Without them the fold cuts into nothing and the flap floats. */
+[data-hint~="peel"] .peel{--ring:.07em;box-shadow:0 0 0 var(--ring) #fff,0 0 0 calc(var(--ring) + 1.5px) rgba(14,14,14,.16),var(--die)}
+[data-hint~="peel"] .peel::after{right:calc(-1*var(--ring));bottom:calc(-1*var(--ring));border-top-left-radius:.06em;
+  background:linear-gradient(135deg,#ebe6dc 0,#f7f5f0 40%,#cfc9bd 50%,transparent 51%);
+  filter:drop-shadow(0 0 .6px rgba(14,14,14,.45)) drop-shadow(-3px -3px 3px rgba(14,14,14,.25))}
+[data-hint~="peel"] :is(.tile,.block)::before{z-index:6;right:0;bottom:0;border-top-left-radius:8px;filter:drop-shadow(-3px -3px 3px rgba(14,14,14,.22))}
+/* a piece popping back after Matt blew it up has no fold until it lands (see unblow in wall.js) */
+[data-hint~="peel"] .popping{clip-path:none!important}
+[data-hint~="peel"] :is(.press,.svc,.svc2,.tag,.peel).popping::after,[data-hint~="peel"] :is(.tile,.block).popping::before{display:none}
+/* pieces lying flat skip the flap altogether */
+[data-hint~="peel"] :is(.press,.svc,.svc2,.tag,.peel):not(.unstuck,.curl,.peeled)::after,
+[data-hint~="peel"] :is(.tile,.block):not(.unstuck,.curl,.peeled)::before{display:none}
+[data-hint~="peel"] .unstuck{--pc:22px}
+[data-hint~="peel"] .peel.unstuck{--pc:.24em}
+/* the big pieces (project tiles, the reel, family and sticker-sheet blocks) curl only under the cursor, never at rest */
+@media (hover:hover){
+  [data-hint~="peel"] :is(.tile,.block).peeled{--pc:42px}
+  [data-hint~="peel"] :is(.press,.svc,.svc2,.tag).peeled{--pc:30px}
+  [data-hint~="peel"] .peel.peeled{--pc:.34em}
+}
+/* a piece in the hand lies flat again */
+[data-hint~="peel"] :is(.press,.svc,.svc2,.tag,.peel,.tile,.block):is(.dragging,.lifted){--pc:0px}
+[data-hint~="peel"] :is(.press,.svc,.svc2,.tag,.peel,.tile,.block).dragging{transition-property:rotate,scale,box-shadow,--pc;transition-duration:.2s,.2s,.2s,.35s}
+
+/* Round stickers (circle and pill client stickers) peel at their curved edge. The fold is the same diagonal cut as the
+   square pieces, so it only reaches the sticker once it passes the curve: --pc starts at (2 - sqrt 2) of the corner radius --rr.
+   The flap is that cut-off bit folded back: a circle of the corner radius, mirrored over the fold, and only its corner up to
+   the fold is painted. The "Say Hello" star has no edge to peel, so it twists and grows instead. */
+[data-hint~="peel"] :is(.sh-circle,.sh-pill){--pc:0px;
+  transition-property:translate,rotate,scale,box-shadow,--pc;transition-duration:.7s,.35s,.25s,.25s,.35s;transition-timing-function:cubic-bezier(.3,1.5,.5,1),ease,ease,ease,cubic-bezier(.3,1.5,.5,1)}
+.sh-circle{--rr:40cqmin}.sh-pill{--rr:min(28cqh,23cqw)}
+[data-hint~="peel"] :is(.sh-circle,.sh-pill):is(.curl,.peeled){
+  clip-path:polygon(-60px -60px,calc(100% + 60px) -60px,calc(100% + 60px) calc(100% - var(--pc) - 60px),calc(100% - var(--pc) - 60px) calc(100% + 60px),-60px calc(100% + 60px))}
+[data-hint~="peel"] :is(.sh-circle,.sh-pill)::after{content:"";position:absolute;right:calc(var(--pc) - 2*var(--rr) - 3px);bottom:calc(var(--pc) - 2*var(--rr) - 3px);
+  width:calc(2*var(--rr));height:calc(2*var(--rr));border-radius:50%;pointer-events:none;
+  background:linear-gradient(135deg,#f4f1ea 0,#fff 42%,#dcd8cf 50%,transparent 51%) 0 0/var(--pc) var(--pc) no-repeat;
+  filter:drop-shadow(-2px -2px 2px rgba(14,14,14,.18))}
+[data-hint~="peel"] :is(.sh-circle,.sh-pill):not(.curl,.peeled)::after,[data-hint~="peel"] :is(.sh-circle,.sh-pill).popping::after{display:none}
+[data-hint~="peel"] :is(.sh-circle,.sh-pill).popping{clip-path:none!important}
+@media (hover:hover){[data-hint~="peel"] :is(.sh-circle,.sh-pill).peeled{--pc:calc(.59*var(--rr) + 26px)}}
+[data-hint~="peel"] :is(.sh-circle,.sh-pill):is(.dragging,.lifted){--pc:0px}
+[data-hint~="peel"] :is(.sh-circle,.sh-pill).dragging{transition-property:rotate,scale,box-shadow,--pc;transition-duration:.2s,.2s,.2s,.35s}
+.hello{transition:translate .7s cubic-bezier(.3,1.5,.5,1),rotate .45s cubic-bezier(.3,1.6,.5,1),scale .45s cubic-bezier(.3,1.6,.5,1)}
+@media (hover:hover){.hello:not(.lifted,.dragging):hover{rotate:calc(var(--r,0deg) - 8deg);scale:1.08}}
+
+/* ---- note: a marker scribble someone left next to "nonsense." ---- */
+.h1{position:relative}
+.hint-note{position:absolute;z-index:3;display:none;font:400 clamp(17px,1.9vw,26px)/1.05 var(--marker);color:var(--cobalt);letter-spacing:0;white-space:nowrap;cursor:grab;pointer-events:auto}
+[data-hint~="note"] .hint-note{display:block}
+@media (max-width:760px){[data-hint~="note"] .h1{margin-bottom:46px}} /* phones: the hero note sits under "nonsense." */
+.hint-note svg{position:absolute;overflow:visible;fill:none;stroke:currentColor;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round}
+.hint-note path{stroke-dasharray:var(--len,300);stroke-dashoffset:var(--len,300)}
+.hint-note .t{display:inline-block;rotate:-5deg;clip-path:inset(0 100% 0 0)}
+.hint-note.drawn path{transition:stroke-dashoffset .7s cubic-bezier(.5,0,.3,1) .55s;stroke-dashoffset:0}
+.hint-note.drawn .t{transition:clip-path .55s steps(9);clip-path:inset(0 0 0 0)}
+/* once something has moved, the arrow has nothing left to point at: it rubs out at once, and the line fades soon after */
+.hint-note.done{transition:opacity .5s 1.6s;opacity:0;pointer-events:none}
+.hint-note.done path{transition:stroke-dashoffset .3s cubic-bezier(.5,0,.8,.4);stroke-dashoffset:var(--len,300)}
+@media (prefers-reduced-motion:reduce){.hint-note path{stroke-dashoffset:0}.hint-note .t{clip-path:none}}
+
+/* ---- the preview switcher (preview only, not for the live site) ---- */
+.hint-pick{position:fixed;left:50%;bottom:18px;translate:-50% 0;z-index:90;display:flex;gap:4px;align-items:center;background:var(--ink);color:#fff;border-radius:999px;padding:5px 6px 5px 14px;box-shadow:0 10px 30px -10px rgba(14,14,14,.6);font:500 12px/1 var(--mono,monospace);text-transform:uppercase;letter-spacing:.06em}
+.hint-pick span{margin-right:6px;opacity:.7}
+.hint-pick button{font:inherit;color:inherit;background:none;border:0;border-radius:999px;padding:8px 12px;cursor:pointer;text-transform:inherit;letter-spacing:inherit}
+.hint-pick button[aria-pressed="true"]{background:var(--lemon);color:var(--ink)}
+@media (max-width:640px){.hint-pick{bottom:auto;top:78px;padding-left:10px}.hint-pick span{display:none}.hint-pick button{padding:7px 9px}}
+
+/* the hero's buttons can be moved too, so "nonsense." isn't the only thing in the hero that moves */
+.hero-side .believe.dragger{display:inline-block}
+.hero-side .reel-btn.dragger{transition:translate .7s cubic-bezier(.3,1.5,.5,1),rotate .3s,scale .25s,background .2s}
+/* while held it follows the finger exactly, like every other piece (no easing on translate) */
+.hero-side .reel-btn.dragger.dragging{transition:rotate .2s,scale .2s,box-shadow .2s,background .2s}
+.hero-side .reel-btn.dragger.lifted{rotate:calc(var(--r,0deg) + 3deg)}
+.work-head{position:relative}
+.work-head .hint-note{position:relative;align-self:center;font-size:clamp(16px,1.5vw,22px);margin-right:60px}
+@media (max-width:760px){.work-head .hint-note{order:3;margin:2px 64px 0 auto}}
+/* iPhone draws its grey tap highlight at the piece's original spot and leaves it there while the piece is dragged away */
+.dragger{-webkit-tap-highlight-color:transparent}
