@@ -1,0 +1,3554 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Yao Mingyi · 个人作品集 Portfolio</title>
+<style>
+  :root {
+    --bg-pure: #FFFFFF;
+    --bg-warm: #F8F8F8;
+    --bg-soft: #F2F2F2;
+    --bg-hover: #E9E9E9;
+    --ink-primary: #111111;
+    --ink-secondary: #383838;
+    --ink-muted: #737373;
+    --ink-faint: #E1E1E1;
+    --orange-primary: #FF6418;
+    --orange-soft: rgba(255, 100, 24, 0.1);
+    --orange-glow: rgba(255, 100, 24, 0.24);
+    --accent-blue: #3047FF;
+    --accent-red: #E5253A;
+    --accent-pink: #C02778;
+    --accent-yellow: #A87800;
+    --status-green: #008F5A;
+    --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+    /* serif removed */ --font-sans-alt: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+    --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+    --font-hand: -apple-system, BlinkMacSystemFont, "SF Pro Rounded", "Inter", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    --font-mono: "JetBrains Mono", "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --ease-cinematic: cubic-bezier(0.7, 0, 0.2, 1);
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' fill='none'><path d='M12 2C10.9 2 10 2.9 10 4V13.5L8.4 12.3C7.6 11.7 6.4 11.8 5.7 12.6C5.1 13.3 5.1 14.4 5.8 15.1L12.5 22.8C14.3 24.8 16.9 26 19.6 26H21C24.3 26 27 23.3 27 20V12C27 10.9 26.1 10 25 10C24.7 10 24.4 10.1 24.1 10.2C23.8 9.5 23.1 9 22.2 9C21.8 9 21.4 9.1 21.1 9.3C20.7 8.5 19.9 8 19 8C18.6 8 18.2 8.1 17.8 8.3V4C17.8 2.9 16.9 2 15.8 2C15.5 2 15.2 2.1 14.9 2.2C14.6 2.1 14.3 2 14 2H12Z' fill='%23FFFFFF' stroke='%23141413' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/><path d='M14 9V17' stroke='%23141413' stroke-width='1.4' stroke-linecap='round'/><path d='M18 10V17' stroke='%23141413' stroke-width='1.4' stroke-linecap='round'/><path d='M22 11V17' stroke='%23141413' stroke-width='1.4' stroke-linecap='round'/></svg>') 8 4, auto !important;
+  }
+
+  a, button, [role="button"], .clickable, .floating-piece-wrapper, .puzzle-letter-span, .work-thumb-card, .cover-rail-item, .puzzle-orange-piece {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' fill='none'><path d='M10 2C8.9 2 8 2.9 8 4V14L6.4 12.8C5.6 12.2 4.4 12.3 3.7 13.1C3.1 13.8 3.1 14.9 3.8 15.6L10.5 23.3C12.3 25.3 14.9 26.5 17.6 26.5H19C22.3 26.5 25 23.8 25 20.5V12.5C25 11.4 24.1 10.5 23 10.5C22.7 10.5 22.4 10.6 22.1 10.7C21.8 10 21.1 9.5 20.2 9.5C19.8 9.5 19.4 9.6 19.1 9.8C18.7 9 17.9 8.5 17 8.5C16.6 8.5 16.2 8.6 15.8 8.8V4C15.8 2.9 14.9 2 13.8 2C13.5 2 13.2 2.1 12.9 2.2C12.6 2.1 12.3 2 12 2H10Z' fill='%23FF6B35' stroke='%23141413' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/><circle cx='12' cy='7' r='1.5' fill='%23FFFFFF'/></svg>') 8 4, pointer !important;
+  }
+
+  .home-active,
+  .home-active * {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M11 29c-1.1 0-2.1-.6-2.7-1.6L3.8 20c-.7-1.1-.3-2.5.8-3.1 1-.6 2.3-.3 3 .7l2 2.8V6a2.2 2.2 0 0 1 4.4 0v8.5-2.2a2 2 0 0 1 4 0v2-1a2 2 0 0 1 4 0v2a2 2 0 0 1 4 0v6.2c0 4.1-3.3 7.5-7.5 7.5H11Z' fill='%23FFFFFF' stroke='%23141413' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 10 5, pointer !important;
+  }
+
+  .home-active.puzzle-grabbing,
+  .home-active.puzzle-grabbing * {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M10 29c-2 0-3.5-1.4-4.2-3.3L2.8 17c-.5-1.4.2-2.9 1.6-3.4 1.3-.5 2.7.1 3.3 1.4L9.5 19 8.3 7a2.3 2.3 0 0 1 4.6-.5l1.1 9.2.2-11a2.3 2.3 0 0 1 4.6.1l-.2 11 1.8-9.2a2.3 2.3 0 0 1 4.5.9l-1.7 9.1 2.5-6.1a2.3 2.3 0 0 1 4.3 1.6l-3.4 9c-1.2 4.9-4.4 8-8.7 8H10Z' fill='%23FFFFFF' stroke='%23141413' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 16 15, grabbing !important;
+  }
+
+  html, body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--bg-pure);
+    color: var(--ink-primary);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: var(--orange-primary);
+    color: var(--bg-pure);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button {
+    font-family: inherit;
+    border: none;
+    background: none;
+    color: inherit;
+  }
+
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    padding: 0 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.90);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    z-index: 100;
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .back-home-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: var(--ink-secondary);
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: var(--bg-warm);
+    transition: all 0.25s var(--ease-out);
+  }
+
+  .back-home-pill:hover {
+    background: var(--ink-primary);
+    color: var(--bg-pure);
+    transform: translateX(-2px);
+  }
+
+  .back-home-pill.hidden {
+    opacity: 0;
+    pointer-events: none;
+    width: 0;
+    padding: 0;
+    margin: -10px;
+    overflow: hidden;
+  }
+
+  .brand-logo {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  .brand-mark {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+
+  .brand-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--ink-muted);
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: var(--bg-warm);
+  }
+
+  .status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--status-green);
+    box-shadow: 0 0 0 3px rgba(0, 143, 90, 0.16);
+    animation: pulseDot 2.8s infinite ease-in-out;
+  }
+
+  @keyframes pulseDot {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.25); opacity: 0.65; }
+  }
+
+  .main-nav {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+  }
+
+  .nav-item {
+    position: relative;
+    font-size: 14px;
+    color: var(--ink-secondary);
+    padding: 6px 2px;
+    transition: color 0.25s ease;
+  }
+
+  .nav-item .nav-num {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--ink-muted);
+    margin-right: 4px;
+    vertical-align: super;
+  }
+
+  .nav-item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1.5px;
+    background: var(--ink-primary);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.35s var(--ease-out);
+  }
+
+  .nav-item:hover {
+    color: var(--ink-primary);
+  }
+
+  .nav-item.active {
+    color: var(--ink-primary);
+    font-weight: 600;
+  }
+
+  .nav-item.active::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  .header-tools {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .tool-chip {
+    font-size: 12px;
+    color: var(--ink-muted);
+    padding: 5px 12px;
+    border-radius: 999px;
+    background: var(--bg-warm);
+    transition: all 0.2s ease;
+  }
+
+  .tool-chip:hover, .tool-chip.active {
+    color: var(--ink-primary);
+    background: var(--bg-hover);
+  }
+
+  .tool-chip.active {
+    background: var(--ink-primary);
+    color: var(--bg-pure);
+  }
+
+  .viewport-stage {
+    padding-top: 70px;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  .home-active .site-header {
+    display: none;
+  }
+
+  .home-active .viewport-stage {
+    padding-top: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  .detail-active .site-header {
+    display: none;
+  }
+
+  .detail-active .viewport-stage {
+    height: 100vh;
+    height: 100dvh;
+    min-height: 0;
+    padding-top: 0;
+    overflow: hidden;
+  }
+
+  .detail-active {
+    overflow: hidden;
+  }
+
+  .page-view {
+    display: none;
+    width: 100%;
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 24px 48px 64px;
+    animation: viewFadeIn 0.45s var(--ease-out) forwards;
+  }
+
+  .page-view.active {
+    display: block;
+  }
+
+  @keyframes viewFadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .crumb-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    font-size: 12px;
+    color: var(--ink-muted);
+  }
+
+  .crumb-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .crumb-links a {
+    color: var(--ink-secondary);
+    transition: color 0.2s;
+  }
+
+  .crumb-links a:hover {
+    color: var(--ink-primary);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  /* 首页真实拼图与手绘风格 */
+  #view-home {
+    width: 100vw;
+    max-width: none;
+    padding: 0;
+    height: 100vh;
+    height: 100dvh;
+    min-height: 0;
+    display: none;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #view-home.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .real-puzzle-board {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: auto;
+  }
+
+  .real-puzzle-board svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .real-puzzle-board .puzzle-board-piece {
+    stroke: #E0E0E0;
+  }
+
+  .real-puzzle-board .puzzle-board-slot > path:first-child {
+    fill: #F1F1F1;
+    stroke: #C8C8C8;
+  }
+
+  .real-puzzle-board .puzzle-board-slot > path:nth-child(2) {
+    stroke: #B8B8B8;
+  }
+
+  .real-puzzle-board .puzzle-board-slot text {
+    display: none;
+  }
+
+  #boardSlot_works { --slot-color: var(--orange-primary); }
+  #boardSlot_about { --slot-color: var(--accent-blue); }
+  #boardSlot_contact { --slot-color: var(--accent-pink); }
+
+  .puzzle-board-slot.is-matching > path:first-child {
+    fill: var(--slot-color);
+    stroke: var(--slot-color);
+    opacity: 0.42;
+  }
+
+  .puzzle-orange-piece {
+    transition: transform 0.25s var(--ease-spring), filter 0.25s ease;
+  }
+
+  .puzzle-orange-piece:hover {
+    filter: drop-shadow(0 8px 18px rgba(255, 100, 24, 0.25));
+  }
+
+  .puzzle-orange-piece:hover .orange-piece-base {
+    fill: #FFF4EC;
+    stroke: var(--orange-primary);
+    stroke-width: 2;
+  }
+
+  /* 悬浮起来的真实拼图块 */
+  .floating-piece-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: max(18.75%, 32.53vh);
+    width: max(18.75%, 32.53dvh);
+    aspect-ratio: 270 / 256;
+    z-index: 15;
+    pointer-events: auto;
+    touch-action: none;
+    user-select: none;
+    transform: translate3d(var(--drag-x, 0px), var(--drag-y, 0px), 0) rotate(var(--piece-tilt, 0deg));
+    transition: transform 0.35s var(--ease-spring);
+  }
+
+  .floating-piece-wrapper:hover {
+    transform: translate3d(var(--drag-x, 0px), calc(var(--drag-y, 0px) - 4px), 0) rotate(var(--piece-tilt, 0deg));
+  }
+
+  .floating-piece-wrapper.is-dragging {
+    z-index: 60;
+    will-change: transform;
+    transition: none;
+    transform: translate3d(var(--drag-x, 0px), var(--drag-y, 0px), 0) rotate(var(--piece-tilt, 0deg));
+  }
+
+  .floating-piece-wrapper.is-placed {
+    --piece-tilt: 0deg;
+    transform: translate3d(var(--drag-x, 0px), var(--drag-y, 0px), 0);
+  }
+
+  .floating-piece--works {
+    --piece-color: #FF4D00;
+    --piece-glow: rgba(255, 77, 0, 0.18);
+    --piece-tilt: 1.4deg;
+    top: 14.5783%;
+    left: 59.375%;
+  }
+
+  .floating-piece--about {
+    --piece-color: #246BFD;
+    --piece-glow: rgba(36, 107, 253, 0.18);
+    --piece-tilt: -1.6deg;
+    top: 34.5783%;
+    left: 46.875%;
+  }
+
+  .floating-piece--contact {
+    --piece-color: #F00078;
+    --piece-glow: rgba(240, 0, 120, 0.18);
+    --piece-tilt: 1.1deg;
+    top: 34.5783%;
+    left: 71.875%;
+  }
+
+  .floating-piece-svg > path {
+    fill: var(--piece-color);
+  }
+
+  .floating-piece-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.16)) drop-shadow(0 2px 6px var(--piece-glow));
+    transition: filter 0.3s ease;
+  }
+
+  .floating-piece-wrapper:hover .floating-piece-inner {
+    filter: drop-shadow(0 12px 24px var(--piece-glow)) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.16));
+  }
+
+  .floating-piece-svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+
+  .floating-piece-svg > path,
+  .floating-piece-svg rect {
+    stroke: none;
+  }
+
+  .floating-piece-svg text {
+    font-family: var(--font-sans);
+  }
+
+  .floating-piece-svg g > rect,
+  .floating-piece-svg g > text:nth-of-type(n + 2),
+  .floating-guide-tag {
+    display: none;
+  }
+
+  .floating-piece-svg g > text:first-of-type {
+    fill: var(--ink-primary);
+    font-size: 20px;
+  }
+
+  .floating-piece-svg text[font-family*="monospace"] {
+    font-family: var(--font-mono);
+  }
+
+  .floating-guide-tag {
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--orange-primary);
+    color: var(--bg-pure);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 3px 12px;
+    border-radius: 999px;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+    animation: bounceTag 2.2s infinite ease-in-out;
+  }
+
+  .floating-piece--works .floating-guide-tag {
+    color: var(--ink-primary);
+  }
+
+  @keyframes bounceTag {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-4px); }
+  }
+
+  #fullscreenZoomClone {
+    position: fixed;
+    z-index: 999;
+    border-radius: 36px;
+    background: #FFFFFF;
+    box-shadow: 0 32px 80px rgba(0,0,0,0.2);
+    pointer-events: none;
+    display: none;
+    transition: all 0.65s var(--ease-cinematic);
+  }
+
+  .handdrawn-hero-cluster {
+    position: relative;
+    top: clamp(-136px, -16vh, -72px);
+    z-index: 10;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 2%;
+    max-width: 720px;
+    pointer-events: auto;
+  }
+
+  @keyframes heroTitleEnter {
+    from { opacity: 0; transform: translateY(54px) scale(0.88); filter: blur(12px); }
+    to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+  }
+
+  @keyframes heroGreetingEnter {
+    from { opacity: 0; transform: translateY(18px); filter: blur(8px); }
+    to { opacity: 1; transform: translateY(0); filter: blur(0); }
+  }
+
+  @keyframes puzzlePieceEnter {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  #view-home.active .sketch-portfolio-title {
+    transform-origin: left center;
+    animation: heroTitleEnter 1.05s var(--ease-out) both;
+  }
+
+  #view-home.active .sketch-hero-greeting {
+    animation: heroGreetingEnter 0.95s var(--ease-out) 0.24s both;
+  }
+
+  #view-home.active .sketch-hero-instruction {
+    animation: heroGreetingEnter 0.95s var(--ease-out) 0.42s both;
+  }
+
+  #view-home.active .floating-piece--works {
+    animation: puzzlePieceEnter 0.8s var(--ease-out) 0.2s both;
+  }
+
+  #view-home.active .floating-piece--about {
+    animation: puzzlePieceEnter 0.8s var(--ease-out) 0.36s both;
+  }
+
+  #view-home.active .floating-piece--contact {
+    animation: puzzlePieceEnter 0.8s var(--ease-out) 0.52s both;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #view-home.active .sketch-portfolio-title,
+    #view-home.active .sketch-hero-greeting,
+    #view-home.active .sketch-hero-instruction,
+    #view-home.active .floating-piece-wrapper {
+      animation: none;
+    }
+  }
+
+  .sketch-portfolio-title {
+    display: flex;
+    align-items: baseline;
+    font-family: "Arial Black", var(--font-display);
+    font-size: clamp(110px, 11vw, 184px);
+    font-weight: 900;
+    line-height: 0.88;
+    letter-spacing: 0;
+    margin-top: -14px;
+    margin-bottom: 16px;
+    user-select: none;
+  }
+
+  @media (max-width: 600px) {
+    .handdrawn-hero-cluster {
+      top: clamp(-172px, -21vh, -112px);
+    }
+
+    .sketch-portfolio-title {
+      font-size: 68px;
+      margin-top: -8px;
+    }
+
+    #view-home .sketch-hero-greeting {
+      font-size: 33px;
+    }
+  }
+
+  .puzzle-letter-span {
+    display: inline-block;
+    margin-right: -0.055em;
+    color: var(--ink-primary);
+    transition: color 0.2s var(--ease-out), transform 0.25s var(--ease-spring);
+    position: relative;
+  }
+
+  .puzzle-letter-span:last-child {
+    margin-right: 0;
+  }
+
+  .letter-r,
+  .letter-t {
+    margin-right: 0.025em;
+  }
+
+  .puzzle-letter-span:hover {
+    transform: translateY(-8px) scale(1.08);
+  }
+
+  .letter-P:hover  { color: var(--accent-red) !important; text-shadow: 0 6px 20px rgba(229, 37, 58, 0.35); }
+  .letter-o1:hover { color: var(--orange-primary) !important; text-shadow: 0 6px 20px rgba(255, 100, 24, 0.35); }
+  .letter-r:hover  { color: var(--accent-yellow) !important; text-shadow: 0 6px 20px rgba(168, 120, 0, 0.3); }
+  .letter-t:hover  { color: var(--status-green) !important; text-shadow: 0 6px 20px rgba(0, 143, 90, 0.32); }
+  .letter-f:hover  { color: var(--accent-blue) !important; text-shadow: 0 6px 20px rgba(48, 71, 255, 0.32); }
+  .letter-o2:hover { color: var(--accent-pink) !important; text-shadow: 0 6px 20px rgba(192, 39, 120, 0.32); }
+  .letter-l:hover  { color: var(--accent-blue) !important; text-shadow: 0 6px 20px rgba(48, 71, 255, 0.32); }
+  .letter-i:hover  { color: var(--accent-red) !important; text-shadow: 0 6px 20px rgba(229, 37, 58, 0.32); }
+  .letter-o3:hover { color: var(--orange-primary) !important; text-shadow: 0 6px 20px rgba(255, 100, 24, 0.32); }
+
+  .sketch-hero-greeting {
+    position: relative;
+    top: 16px;
+    margin-left: clamp(6px, 0.7vw, 12px);
+    font-family: var(--font-display);
+    font-size: clamp(34px, 4.2vw, 58px);
+    font-weight: 700;
+    color: var(--ink-primary);
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .sketch-hero-instruction {
+    position: relative;
+    top: 20px;
+    margin: 0 0 0 clamp(6px, 0.7vw, 12px);
+    color: var(--ink-secondary);
+    font-family: var(--font-hand);
+    font-size: clamp(16px, 1.45vw, 20px);
+    font-weight: 500;
+    letter-spacing: 1px;
+    width: max-content;
+  }
+
+  .hero-nav-dock {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .dock-btn {
+    padding: 10px 22px;
+    border-radius: 999px;
+    font-size: 13.5px;
+    font-weight: 500;
+    transition: all 0.25s var(--ease-out);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .dock-btn.orange {
+    background: var(--orange-primary);
+    color: var(--ink-primary);
+    box-shadow: 0 10px 24px -8px rgba(255, 107, 53, 0.35);
+  }
+
+  .dock-btn.orange:hover {
+    transform: translateY(-2px);
+    background: #E84F00;
+  }
+
+  .dock-btn.soft {
+    background: var(--bg-warm);
+    color: var(--ink-primary);
+  }
+
+  .dock-btn.soft:hover {
+    background: var(--bg-hover);
+    transform: translateY(-2px);
+  }
+
+  /* 自我介绍 */
+  .about-top-grid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 56px;
+    align-items: stretch;
+    margin-bottom: 52px;
+  }
+
+  .portrait-column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .portrait-canvas {
+    width: 100%;
+    height: 330px;
+    border-radius: 24px;
+    background: var(--bg-warm);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .portrait-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .portrait-note {
+    position: absolute;
+    bottom: 14px;
+    left: 16px;
+    right: 16px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(8px);
+    font-size: 11px;
+    color: var(--ink-secondary);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .meta-stat-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .meta-stat-card {
+    background: var(--bg-warm);
+    border-radius: 16px;
+    padding: 14px 18px;
+  }
+
+  .meta-stat-label {
+    font-size: 11px;
+    color: var(--ink-muted);
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+
+  .meta-stat-val {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink-primary);
+  }
+
+  .about-bio-column {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+  }
+
+  .bio-header h1 {
+    font-family: var(--font-display);
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .bio-header .bio-role {
+    font-size: 16px;
+    color: var(--ink-secondary);
+    font-weight: 400;
+  }
+
+  .bio-quick-links {
+    margin-top: 8px;
+    font-size: 13px;
+    color: var(--ink-muted);
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .bio-statement {
+    background: var(--bg-warm);
+    border-radius: 22px;
+    padding: 24px 28px;
+    font-size: 18px;
+    line-height: 1.85;
+    color: var(--ink-primary);
+  }
+
+  .bio-statement-title {
+    margin-bottom: 12px;
+    color: var(--orange-primary);
+    font-size: 24px;
+    line-height: 1.4;
+  }
+
+  .bio-statement p + p {
+    margin-top: 12px;
+  }
+
+  .section-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 12px;
+  }
+
+  .skill-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .skill-pill {
+    padding: 7px 16px;
+    border-radius: 999px;
+    background: var(--bg-warm);
+    font-size: 13px;
+    color: var(--ink-primary);
+    transition: all 0.2s ease;
+  }
+
+  .skill-pill:hover {
+    background: var(--ink-primary);
+    color: var(--bg-pure);
+    transform: translateY(-1px);
+  }
+
+  .about-bottom-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(20, 20, 19, 0.06);
+  }
+
+  .timeline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .timeline-row {
+    display: grid;
+    grid-template-columns: 160px 220px 1fr auto;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 24px;
+    border-radius: 18px;
+    background: var(--bg-warm);
+    transition: transform 0.25s var(--ease-out), background 0.25s ease;
+  }
+
+  .timeline-row:hover {
+    transform: translateX(6px);
+    background: var(--bg-soft);
+  }
+
+  .tl-period {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--ink-muted);
+  }
+
+  .tl-role {
+    font-weight: 600;
+    font-size: 14.5px;
+  }
+
+  .tl-impact {
+    font-size: 13.5px;
+    color: var(--ink-secondary);
+  }
+
+  .tl-metric {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--orange-primary);
+    background: var(--orange-soft);
+    padding: 4px 10px;
+    border-radius: 999px;
+  }
+
+  .style-quad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .style-card {
+    background: var(--bg-warm);
+    border-radius: 20px;
+    padding: 20px 22px;
+    transition: transform 0.25s var(--ease-out);
+  }
+
+  .style-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .style-num {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--ink-muted);
+    margin-bottom: 6px;
+  }
+
+  .style-card strong {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+
+  .style-card p {
+    font-size: 13px;
+    color: var(--ink-secondary);
+  }
+
+  .tools-resume-bar {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 32px;
+    align-items: center;
+    background: var(--bg-warm);
+    border-radius: 24px;
+    padding: 28px 32px;
+  }
+
+  .resume-cta-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-left: 28px;
+    border-left: 1px solid rgba(20, 20, 19, 0.08);
+  }
+
+  /* 联系方式 */
+  .contact-split {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 440px;
+    gap: clamp(32px, 3.5vw, 48px);
+    align-items: stretch;
+    margin-inline: -20px;
+  }
+
+  .contact-left {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .contact-intro-card {
+    background: var(--bg-warm);
+    border-radius: 22px;
+    padding: 24px 28px;
+  }
+
+  .contact-intro-card h2 {
+    font-family: var(--font-display);
+    font-size: 28px;
+    margin-bottom: 6px;
+  }
+
+  .channel-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .channel-item {
+    display: grid;
+    grid-template-columns: 100px 1fr auto;
+    align-items: center;
+    background: var(--bg-warm);
+    padding: 16px 24px;
+    border-radius: 18px;
+    transition: all 0.25s var(--ease-out);
+  }
+
+  .channel-item:hover {
+    background: var(--bg-soft);
+    transform: translateX(4px);
+  }
+
+  .channel-label {
+    font-size: 13px;
+    color: var(--ink-muted);
+  }
+
+  .channel-val {
+    font-family: var(--font-sans);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink-primary);
+  }
+
+  .channel-actions {
+    display: flex;
+    gap: 8px;
+  }
+
+  .pill-action {
+    padding: 7px 16px;
+    border-radius: 999px;
+    background: var(--bg-pure);
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--ink-primary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: all 0.2s ease;
+  }
+
+  .pill-action:hover {
+    background: var(--ink-primary);
+    color: var(--bg-pure);
+  }
+
+  .info-matrix-6 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .matrix-cell {
+    background: var(--bg-warm);
+    border-radius: 18px;
+    padding: 18px 20px;
+  }
+
+  .matrix-cell h4 {
+    font-size: 13.5px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--ink-primary);
+  }
+
+  .matrix-cell ul {
+    list-style: none;
+    font-size: 12.5px;
+    color: var(--ink-secondary);
+    line-height: 1.75;
+  }
+
+  .qa-sheet {
+    background: var(--bg-warm);
+    border-radius: 20px;
+    padding: 20px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .qa-line {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 16px;
+    font-size: 13.5px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(20, 20, 19, 0.05);
+  }
+
+  .qa-line:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .qa-q {
+    font-weight: 600;
+    color: var(--ink-primary);
+  }
+
+  .qa-a {
+    color: var(--ink-secondary);
+  }
+
+  .backcover-invite {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(120deg, var(--bg-warm) 0%, #F0F0F0 100%);
+    padding: 20px 26px;
+    border-radius: 20px;
+  }
+
+  .wechat-panel {
+    background: var(--bg-warm);
+    border-radius: 28px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .qr-stage {
+    background: var(--bg-pure);
+    border-radius: 22px;
+    padding: 28px;
+    margin: 18px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 12px 32px -12px rgba(20, 20, 19, 0.06);
+  }
+
+  .wechat-qr-image {
+    display: block;
+    width: min(240px, 100%);
+    aspect-ratio: 1;
+    object-fit: contain;
+  }
+
+  @media (max-width: 1100px) {
+    .contact-split {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 24px;
+      margin-inline: 0;
+    }
+  }
+
+  /* 封底页 */
+  .backcover-hero {
+    text-align: center;
+    padding: 20px 0 24px;
+  }
+
+  .backcover-hero h1 {
+    font-family: var(--font-display);
+    font-size: 44px;
+    margin: 8px 0 10px;
+  }
+
+  .flow-banner {
+    max-width: 820px;
+    margin: 0 auto 28px;
+    background: var(--bg-warm);
+    border-radius: 18px;
+    padding: 14px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    font-size: 13.5px;
+    color: var(--ink-secondary);
+  }
+
+  .flow-tag {
+    background: var(--ink-primary);
+    color: var(--bg-pure);
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-weight: 500;
+  }
+
+  .cover-showcase-grid {
+    display: grid;
+    grid-template-columns: 1.85fr 1fr;
+    gap: 24px;
+    min-height: 340px;
+    margin-bottom: 28px;
+  }
+
+  .cover-featured-stage {
+    background: var(--bg-warm);
+    border-radius: 24px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s var(--ease-out);
+  }
+
+  .cover-featured-stage:hover {
+    transform: translateY(-4px);
+  }
+
+  .cover-featured-art {
+    flex: 1;
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+
+  .cover-featured-info {
+    padding: 20px 26px;
+    background: rgba(255, 255, 255, 0.76);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .cover-rail {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  .cover-rail-item {
+    display: grid;
+    grid-template-columns: 84px 1fr auto;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 16px;
+    border-radius: 18px;
+    background: var(--bg-warm);
+    transition: all 0.25s var(--ease-out);
+  }
+
+  .cover-rail-item:hover {
+    background: var(--bg-soft);
+    transform: translateX(-4px);
+  }
+
+  .cover-rail-item.active {
+    background: var(--ink-primary);
+    color: var(--bg-pure);
+  }
+
+  .cover-rail-item.active .rail-sub {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .rail-thumb {
+    height: 54px;
+    border-radius: 12px;
+    background: var(--bg-pure);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--ink-muted);
+    overflow: hidden;
+  }
+
+  .cover-rail-item.active .rail-thumb {
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--bg-pure);
+  }
+
+  .status-footer-strip {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .status-footer-cell {
+    background: var(--bg-warm);
+    border-radius: 16px;
+    padding: 16px 20px;
+  }
+
+  
+  /* ==========================================================================
+     作品总览 (Works Overview) —— 满屏锁定无滚动排布 (100vh Fullscreen Fit)
+     ========================================================================== */
+  #view-works {
+    height: calc(100vh - 70px);
+    height: calc(100dvh - 70px);
+    min-height: 0;
+    max-height: calc(100vh - 70px);
+    max-height: calc(100dvh - 70px);
+    padding: 14px 48px 18px;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    overflow: hidden; /* 绝对禁止多余纵向滚动 */
+  }
+
+  #view-works.active {
+    display: flex;
+  }
+
+  .works-mode-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg-warm);
+    padding: 6px 16px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+    flex-shrink: 0;
+    gap: 10px;
+  }
+
+  .mode-tabs {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .mode-tab {
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 12.5px;
+    color: var(--ink-secondary);
+    transition: all 0.2s ease;
+  }
+
+  .mode-tab.active {
+    background: var(--ink-primary);
+    color: var(--bg-pure);
+    font-weight: 600;
+  }
+
+  .filter-pills {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .filter-pill {
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 11.5px;
+    color: var(--ink-muted);
+    transition: all 0.2s;
+  }
+
+  .filter-pill:hover, .filter-pill.active {
+    color: var(--ink-primary);
+    background: var(--bg-pure);
+    font-weight: 500;
+  }
+
+  .works-stage-grid {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 20px;
+    flex: 1;
+    min-height: 0; /* 关键：确保 flex 子项自适应撑满而不溢出 */
+    height: auto;
+    align-items: stretch;
+    box-sizing: border-box;
+  }
+
+  .works-thumb-stack {
+    display: grid;
+    transform: translateX(-16px);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    height: 100%;
+    min-height: 0;
+  }
+
+  .work-thumb-card {
+    background: var(--bg-warm);
+    border-radius: 20px;
+    padding: 14px 18px;
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 14px;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+    transition: transform 0.28s var(--ease-spring), background 0.25s ease, box-shadow 0.28s var(--ease-spring);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .work-thumb-card:hover {
+    transform: scale(1.025) translateX(4px);
+    box-shadow: 0 14px 32px -10px rgba(20, 20, 19, 0.12);
+    z-index: 3;
+    background: var(--bg-soft);
+  }
+
+  .work-thumb-card.active {
+    background: var(--ink-primary);
+    color: var(--bg-pure);
+    transform: scale(1.02) translateX(4px);
+    box-shadow: 0 16px 36px -10px rgba(20, 20, 19, 0.22);
+    z-index: 4;
+  }
+
+  .work-thumb-mini {
+    height: 100%;
+    max-height: 96px;
+    border-radius: 14px;
+    background: var(--bg-pure);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 0 1px rgba(20, 20, 19, 0.05);
+  }
+
+  .work-thumb-card.active .work-thumb-mini {
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: none;
+  }
+
+  .work-thumb-mini-num {
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .work-thumb-mini-tag {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--orange-primary);
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+  }
+
+  .work-thumb-card.active .work-thumb-mini-tag {
+    color: var(--orange-primary);
+  }
+
+  .work-thumb-meta {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .work-thumb-meta .wt-idx {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: var(--ink-muted);
+  }
+
+  .work-thumb-card.active .wt-idx {
+    color: rgba(255, 255, 255, 0.65);
+  }
+
+  .work-thumb-meta .wt-title {
+    font-family: var(--font-display);
+    font-size: 20px;
+    color: var(--orange-primary);
+    font-weight: 700;
+    margin: 2px 0 3px;
+    line-height: 1.25;
+  }
+
+  .work-thumb-meta .wt-tags {
+    font-size: 14px;
+    color: var(--ink-muted);
+    line-height: 1.3;
+  }
+
+  .work-thumb-card.active .wt-tags {
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  .work-thumb-meta .wt-thesis {
+    font-size: 11px;
+    color: var(--ink-secondary);
+    margin-top: 3px;
+    line-height: 1.35;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .work-thumb-card.active .wt-thesis {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .works-bigshot-stage {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 0;
+    box-sizing: border-box;
+  }
+
+  .bigshot-visual-canvas {
+    background: var(--bg-warm);
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 32px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 26px;
+  }
+
+  .bigshot-visual-canvas svg,
+  .bigshot-visual-canvas img,
+  .bigshot-visual-canvas video {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.04));
+  }
+
+  .bigshot-visual-canvas--pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .bigshot-visual-canvas--pair img {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+    object-fit: contain;
+  }
+
+  .bigshot-footer-bar {
+    --summary-lines: 3;
+    padding: 28px 28px 14px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-shrink: 0;
+  }
+
+  .bigshot-title {
+    font-family: var(--font-display);
+    font-size: 30px;
+    color: var(--orange-primary);
+    font-weight: 700;
+    margin: 0 0 10px;
+    line-height: 1.2;
+    min-height: 36px;
+  }
+
+  .bigshot-copy {
+    flex: 1;
+    min-width: 0;
+  }
+
+  #worksBigshotSummary {
+    max-width: 68ch;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.8;
+    color: var(--ink-primary);
+    height: calc(var(--summary-lines) * 1.8em);
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+  }
+
+  .bigshot-footer-bar > :last-child {
+    flex: 0 0 auto;
+  }
+
+  @media (max-width: 1100px) {
+    .bigshot-footer-bar {
+      --summary-lines: 4;
+    }
+  }
+
+
+  /* 作品详情页 */
+  .detail-split-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.8fr) minmax(340px, 1fr);
+    gap: 24px;
+    flex: 1;
+    min-height: 0;
+  }
+
+  #view-detail.active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: none;
+    height: 100vh;
+    height: 100dvh;
+    padding: 18px 32px 12px;
+    overflow: hidden;
+  }
+
+  #view-detail .crumb-bar {
+    flex: 0 0 auto;
+    margin-bottom: 14px;
+  }
+
+  .detail-left-gallery {
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+  }
+
+  .photo-stream-pane {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    overflow-y: auto;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .process-plate {
+    min-width: 0;
+    flex: 0 0 auto;
+    background: #F4F4F4;
+    overflow: hidden;
+    border-radius: 18px;
+  }
+
+  .process-plate--image {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: 18px;
+  }
+
+  .photo-stream-pane--video > .process-plate {
+    margin-block: auto;
+  }
+
+  .plate-visual {
+    height: calc(100% - 58px);
+    min-height: 0;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .plate-visual svg {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+  }
+
+  .plate-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .plate-caption {
+    height: 58px;
+    padding: 6px 8px;
+    background: rgba(255, 255, 255, 0.84);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    overflow: hidden;
+  }
+
+  .plate-caption strong {
+    font-size: 10px;
+    color: var(--ink-primary);
+  }
+
+  .plate-caption span {
+    font-size: 9px;
+    color: var(--ink-secondary);
+  }
+
+  .detail-right-dossier {
+    min-width: 0;
+    min-height: 0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-right: 4px;
+  }
+
+  .dossier-card {
+    background: var(--bg-warm);
+    border-radius: 12px;
+    padding: 10px 12px;
+  }
+
+  .dossier-card h3 {
+    font-size: 10px;
+    font-family: var(--font-mono);
+    letter-spacing: 1px;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .dossier-card p {
+    font-size: 11px;
+    color: var(--ink-primary);
+    line-height: 1.4;
+  }
+
+  .human-note-card {
+    background: #FFF4EC;
+    border-radius: 12px;
+    padding: 10px 12px;
+    border-left: 3px solid var(--orange-primary);
+  }
+
+  .human-note-card .note-badge {
+    font-size: 10px;
+    color: var(--orange-primary);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .detail-right-dossier h2 {
+    font-size: 18px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .detail-bottom-nav {
+    flex: 0 0 auto;
+    margin-top: 8px;
+    padding-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 900px) {
+    #view-detail.active {
+      padding-right: 18px;
+      padding-left: 18px;
+    }
+
+    .detail-split-layout {
+      grid-template-columns: minmax(0, 1.6fr) minmax(300px, 1fr);
+      gap: 14px;
+    }
+
+    .dossier-card,
+    .human-note-card {
+      padding: 8px 9px;
+    }
+
+    .dossier-card p {
+      font-size: 10px;
+    }
+  }
+
+  /* 异常状态页 */
+  .state-center-stage {
+    min-height: 600px;
+    background: var(--bg-warm);
+    border-radius: 26px;
+    padding: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .state-art-box {
+    width: 100%;
+    max-width: 520px;
+    min-height: 220px;
+    background: var(--bg-pure);
+    border-radius: 20px;
+    margin-bottom: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+
+  .state-switcher-bar {
+    display: inline-flex;
+    gap: 8px;
+    background: var(--bg-pure);
+    padding: 6px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+  }
+
+  .toast-msg {
+    position: fixed;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: var(--ink-primary);
+    color: var(--bg-pure);
+    padding: 10px 22px;
+    border-radius: 999px;
+    font-size: 13px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s var(--ease-out);
+    z-index: 200;
+  }
+
+  .toast-msg.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  [contenteditable="true"] {
+    outline: 1.5px dashed var(--orange-primary);
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 20, 19, 0.45);
+    backdrop-filter: blur(6px);
+    z-index: 150;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+  }
+
+  .modal-backdrop.open {
+    display: flex;
+  }
+
+  .resume-sheet-modal {
+    background: var(--bg-pure);
+    width: 100%;
+    max-width: 780px;
+    max-height: 88vh;
+    overflow-y: auto;
+    border-radius: 24px;
+    padding: 44px 52px;
+    box-shadow: 0 32px 80px rgba(0,0,0,0.22);
+  }
+
+  /* ==========================================================================
+     Gut Feeling Agency 风格注入：贴纸感、手绘批注与整理按钮
+     ========================================================================== */
+  .tidy-up-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--ink-primary);
+    color: var(--bg-pure);
+    font-size: 11.5px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 999px;
+    box-shadow: 0 8px 20px -4px rgba(20, 20, 19, 0.25);
+    transition: all 0.3s var(--ease-spring);
+    cursor: pointer;
+  }
+
+  #view-home > .tidy-up-pill {
+    position: fixed;
+    right: 32px;
+    bottom: 40px;
+    z-index: 20;
+  }
+
+  .tidy-up-pill:hover {
+    background: var(--orange-primary);
+    color: var(--ink-primary);
+    transform: translateY(-2px) scale(1.05);
+  }
+
+  .tidy-up-pill.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px) scale(0.9);
+  }
+
+  /* HELLO my name is 贴纸卡片 (对标 Gut Feeling 标志性工牌贴纸) */
+  .nametag-sticker {
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+    border: 2px solid #E2E2E2;
+    transition: box-shadow 0.25s var(--ease-spring);
+  }
+
+  .nametag-sticker:hover {
+    box-shadow: 0 16px 32px -6px rgba(0, 0, 0, 0.12), 0 3px 8px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .nametag-header {
+    background: var(--orange-primary);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px 12px 16px;
+  }
+
+  .nametag-header-main {
+    font-family: var(--font-display);
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.5px;
+  }
+
+  .nametag-header-sub {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    opacity: 0.92;
+    margin-top: 2px;
+  }
+
+  .nametag-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px 18px;
+    text-align: center;
+  }
+
+  .nametag-name {
+    font-family: var(--font-display);
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--ink-primary);
+    letter-spacing: -0.5px;
+  }
+
+  .nametag-role-tag {
+    font-size: 11.5px;
+    color: var(--ink-muted);
+    margin-top: 4px;
+  }
+
+  /* 手写风批注强调线 */
+  .gut-annotation {
+    display: inline-block;
+    position: relative;
+    font-family: var(--font-display);
+    color: var(--orange-primary);
+    font-size: 13px;
+  }
+
+</style>
+<link rel="stylesheet" href="./assets/navigation-refresh.css" />
+<link rel="stylesheet" href="./assets/editorial-sidebar.css" />
+<link rel="stylesheet" href="./assets/homepage-refresh.css" />
+<link rel="stylesheet" href="./assets/about-approved.css" />
+<link rel="stylesheet" href="./assets/detail-editorial.css" />
+<link rel="stylesheet" href="./assets/contact-editorial.css" />
+<link rel="stylesheet" href="./assets/works-categories.css" />
+<link rel="stylesheet" href="./assets/hr-home-approved.css" />
+</head>
+<body class="home-active">
+
+  <!-- 顶部导航 -->
+  <header class="site-header">
+    <div class="header-left">
+      <button id="backHomeBtn" class="back-home-pill hidden" onclick="navigate('home')">
+        <span>←</span> 返回封面
+      </button>
+      
+    </div>
+
+    <nav class="main-nav" aria-label="主导航"><a class="nav-item" data-target="home" onclick="navigate('home')">首页</a><a class="nav-item" data-target="works" onclick="navigate('works')">我的作品</a><a class="nav-item" data-target="about" onclick="navigate('about')">关于与联系</a></nav>
+  </header>
+
+  <!-- 全屏放大转场层 -->
+  <div id="fullscreenZoomClone"></div>
+
+  <!-- 主视图舞台 -->
+  <main class="viewport-stage">
+
+    <!-- 01. 封面页：手绘设计稿完全对齐 -->
+<section id="view-home" class="page-view active hr-home"><div class="hr-home-layout"><div class="landing-top"><section class="intro"><h1 class="home-portfolio-title" aria-label="Portfolio"><span aria-hidden="true">P</span><span aria-hidden="true">o</span><span aria-hidden="true">r</span><span aria-hidden="true">t</span><span aria-hidden="true">f</span><span aria-hidden="true">o</span><span aria-hidden="true">l</span><span aria-hidden="true">i</span><span aria-hidden="true">o</span></h1><div class="hello">你好！我是么明祎</div><div class="gateway-heading"><small>拖动拼图，进入页面</small></div><div class="gateways"><div class="gateway"><div class="gateway-stage"><svg class="gateway-slot" viewBox="-32 -32 244 244"><path d="M12 0 H58 C68 0 70 -4 70 -13 C70 -37 110 -37 110 -13 C110 -4 112 0 122 0 H168 Q180 0 180 12 V58 C180 68 184 70 193 70 C217 70 217 110 193 110 C184 110 180 112 180 122 V168 Q180 180 168 180 H12 Q0 180 0 168 V12 Q0 0 12 0Z"></path><text x="90" y="90"></text></svg><svg class="gateway-piece" viewBox="-32 -32 244 244"><path d="M12 0 H58 C68 0 70 -4 70 -13 C70 -37 110 -37 110 -13 C110 -4 112 0 122 0 H168 Q180 0 180 12 V58 C180 68 184 70 193 70 C217 70 217 110 193 110 C184 110 180 112 180 122 V168 Q180 180 168 180 H12 Q0 180 0 168 V12 Q0 0 12 0Z" fill="#ff7a1a"></path><text x="90" y="90">全部作品</text></svg><svg class="gateway-arrow" viewBox="0 0 120 70"><path d="M5 55 Q55 60 105 12 M86 15 L107 10 L101 31"></path></svg></div></div><div class="gateway"><div class="gateway-stage"><svg class="gateway-slot" viewBox="-32 -32 244 244"><path d="M12 0 H168 Q180 0 180 12 V168 Q180 180 168 180 H122 C112 180 110 176 110 167 C110 143 70 143 70 167 C70 176 68 180 58 180 H12 Q0 180 0 168 V122 C0 112 -4 110 -13 110 C-37 110 -37 70 -13 70 C-4 70 0 68 0 58 V12 Q0 0 12 0Z"></path><text x="90" y="90"></text></svg><svg class="gateway-piece" viewBox="-32 -32 244 244"><path d="M12 0 H168 Q180 0 180 12 V168 Q180 180 168 180 H122 C112 180 110 176 110 167 C110 143 70 143 70 167 C70 176 68 180 58 180 H12 Q0 180 0 168 V122 C0 112 -4 110 -13 110 C-37 110 -37 70 -13 70 C-4 70 0 68 0 58 V12 Q0 0 12 0Z" fill="#3248a8"></path><text x="90" y="90">关于与联系</text></svg><svg class="gateway-arrow" viewBox="0 0 120 70"><path d="M5 55 Q55 60 105 12 M86 15 L107 10 L101 31"></path></svg></div></div></div></section><section class="highlights"><div class="highlights-head"><h2>精选作品</h2></div><div class="highlight-grid"><article><div class="thumb"><img src="作品一own%20your%20shit/微信图片_20260326152138.jpg"></div><h3>own your sh*t <b>↗</b></h3><p class="project-contribution">用户调研 · 吉祥物与宣传设计</p></article><article><div class="thumb scarf"><img src="作品二学院猫敦煌季/01-敦煌猫咪方巾设计.jpg"></div><h3>学院猫敦煌季 <b>↗</b></h3><p class="project-contribution">产品图案设计 · 厂家对接与打样</p></article><article class="third-project" data-work-index="4"><div class="thumb campus-map"><img src="./作品五校园游客导览/01-游客导览地图.png" alt="BNUZH 游客导览系统地图"></div><h3>BNUZH 游客导览系统 <b>↗</b></h3><p class="project-contribution">前期调研 · 导览图标设计 · 指示牌设计</p></article></div></section></div></div></section>
+<!-- 导航中心已精简直连：入口已直接前置至首页三大悬浮拼图块 -->
+
+    
+
+
+    <!-- 02. 自我介绍 -->
+    <section id="view-about" class="page-view">
+<div class="about-first-screen">
+<div class="about-opening"><p class="about-display-heading">A little <span>about me.</span></p></div>
+      <div class="about-top-grid">
+        <div class="portrait-column">
+          <div class="portrait-canvas">
+            <img class="portrait-photo" src="./基本信息/个人介绍.jpg" alt="么明祎的个人照片" decoding="async">
+          </div>
+
+          <!-- Gut Feeling 风格标志性贴纸：HELLO my name is 俏皮工牌 -->
+          <div class="nametag-sticker">
+            <div class="nametag-header">
+              <div class="nametag-header-main">DESIGN WITH CARE</div>
+              <div class="nametag-header-sub">我的设计主张</div>
+            </div>
+            <div class="nametag-body">
+              <div class="nametag-name">从真实的生活出发</div>
+              <div class="nametag-role-tag">关注人的需求，也在意视觉表达。</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="about-bio-column">
+          <div class="bio-header">
+            <h1 class="editable"><span class="preview-cn-name">么明祎</span> <span class="about-english-name">Yao Mingyi</span></h1><p class="bio-role">艺术设计学 · 体验与视觉设计</p>
+          </div>
+
+          <div class="bio-statement editable">
+            <h2 class="bio-statement-title">我是谁？</h2>
+            <p>
+              我是么明祎，就读于北京师范大学珠海校区艺术设计学专业。
+            </p>
+            <p>
+              偏爱落地性强的产品与品牌设计，习惯用逻辑梳理创意，乐于尝试跨学科的媒介与交互创作。
+            </p>
+          </div>
+
+          <div class="bio-statement editable">
+            <h2 class="bio-statement-title">我能做什么？</h2>
+            <p><strong>前期：</strong>实地考察、用户访谈、痛点调研</p>
+            <p><strong>视觉：</strong>Logo、IP、文创、平面展板设计</p>
+            <p><strong>跨媒介：</strong>交互影像、投影装置方案构思</p>
+            <p><strong>收尾：</strong>信息可视化、项目复盘</p>
+          </div>
+
+          <div class="bio-statement editable">
+            <h2 class="bio-statement-title">我的技能</h2>
+            <ul class="software-skills" aria-label="设计软件技能">
+              <li><img src="./assets/software-icons/photoshop.svg" alt="" width="64" height="64"><span>Photoshop</span></li>
+              <li><img src="./assets/software-icons/illustrator.svg" alt="" width="64" height="64"><span>Adobe Illustrator</span></li>
+              <li><img src="./assets/software-icons/procreate.png" alt="" width="64" height="64"><span>Procreate</span></li>
+              <li><img src="./assets/software-icons/rhino.svg" alt="" width="64" height="64"><span>Rhino</span></li>
+              <li><img src="./assets/software-icons/keyshot.svg" alt="" width="64" height="64"><span>KeyShot</span></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Figma"><path fill="#f24e1e" d="M16 4a8 8 0 0 0 0 16h8V4z"/><path fill="#ff7262" d="M24 4h8a8 8 0 1 1 0 16h-8z"/><path fill="#a259ff" d="M16 20a8 8 0 0 0 0 16h8V20z"/><circle cx="32" cy="28" r="8" fill="#1abcfe"/><path fill="#0acf83" d="M16 36a8 8 0 1 0 8 8v-8z"/></svg><span>Figma<small>基础使用</small></span></li><li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="VS Code"><path fill="#007acc" d="m34 3 11 5v32l-11 5-22-17-7 6-4-2V16l4-2 7 6zM5 20v8l5-4zm13 4 16 12V12z"/><path fill="#0098ff" d="m34 3 11 5v32l-11 5V3z"/><path fill="#1f9cf0" d="m5 14 29 22v9L1 20v-4z"/></svg><span>VS Code<small>基础使用</small></span></li></ul>
+          </div>
+        </div>
+      </div>
+
+        <button class="about-scroll-hint" type="button" onclick="document.querySelector('#view-about .about-bottom-stack').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'})" aria-label="向下查看教育经历与荣誉奖项"><span>向下探索 · 教育经历与荣誉奖项</span><span class="about-scroll-arrow" aria-hidden="true">↓</span></button>
+      </div>
+
+      <section class="about-contact-strip" id="aboutContact"><div><h2>联系我，一起聊聊设计。</h2><div class="about-contact-values"><div><span>邮箱</span><strong>ymy01000600@163.com</strong><button onclick="copyText('ymy01000600@163.com','已复制邮箱')">复制邮箱 ↗</button></div><div><span>微信</span><strong>ymy_010101</strong><button onclick="copyText('ymy_010101','已复制微信号')">复制微信 ↗</button></div><div><span>电话</span><strong>132 8425 8395</strong><button onclick="copyText('13284258395','已复制电话')">复制电话 ↗</button></div></div></div><img src="./基本信息/微信图片_20261016002353.jpg" alt="微信二维码" width="140" height="140"></section>
+<div class="about-bottom-stack">
+        <div>
+          <div class="history-editorial-heading"><span class="history-number">01</span><div><p>EDUCATION</p><h2>教育经历</h2></div></div>
+          <div class="timeline-list">
+            <div class="timeline-row personal-history-row"><span class="tl-period">2024 — 至今</span><span class="tl-role">北京师范大学珠海校区</span><span class="tl-impact">艺术设计学专业 · 本科在读</span></div>
+            <div class="timeline-row personal-history-row"><span class="tl-period">2025.08 — 2025.12</span><span class="tl-role">新加坡南洋艺术学院</span><span class="tl-impact">交换学习</span></div>
+            <div class="timeline-row personal-history-row"><span class="tl-period">2011 — 2024</span><span class="tl-role">沈阳</span><span class="tl-impact">完成小学、初中及高中阶段学习。</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="history-editorial-heading"><span class="history-number">02</span><div><p>HONORS &amp; AWARDS</p><h2>荣誉与奖项</h2></div></div>
+          <div class="timeline-list">
+            <div class="timeline-row personal-history-row"><span class="tl-period">2024—2025 学年</span><span class="tl-role">京师奖学金</span><span class="tl-impact">京师一等奖学金</span><span class="tl-metric">一等奖</span></div>
+            <div class="timeline-row personal-history-row"><span class="tl-period">2025—2026 学年</span><span class="tl-role">京师奖学金</span><span class="tl-impact">京师三等奖学金</span><span class="tl-metric">三等奖</span></div>
+            <div class="timeline-row personal-history-row"><span class="tl-period">第十五届</span><span class="tl-role tl-role-quoted">“挑战杯”广东大学生创业计划竞赛</span><span class="tl-impact">河源“百千万工程”专项赛</span><span class="tl-metric">铜奖</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="about-back-top"><button class="dock-btn" type="button" onclick="window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});document.getElementById('view-about').scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'})">回到顶部</button></div>
+    </section>
+
+    <!-- 03. 联系方式 -->
+    
+
+    <!-- 04. 封底页 -->
+    <section id="view-backcover" class="page-view">
+      <div class="backcover-hero">
+        <div class="hero-eyebrow">THANK YOU · BACK COVER</div>
+        <h1>谢谢你读到这里 🙏</h1>
+        <p style="font-size:15px; color:var(--ink-secondary); max-width:560px; margin:0 auto;">
+          每一份被认真翻阅的作品集都很幸运。期待在下一次面试、合作或项目里与你相遇。
+        </p>
+      </div>
+
+      <div class="flow-banner">
+        <span class="flow-tag">阅读动线提示</span>
+        <span id="backcoverDynamicHint">
+          如果你刚跳过来、还没看作品 → 推荐顺序 <strong>【<a onclick="navigate('works')" style="text-decoration:underline; cursor:pointer;">作品总览</a> → <a onclick="openDetail(0)" style="text-decoration:underline; cursor:pointer;">作品 1 完整详情</a> → 这里】</strong>；如果想直接约面 → <a onclick="navigate('contact')" style="color:var(--orange-primary); text-decoration:underline; cursor:pointer;">[返回联系方式]</a>
+        </span>
+      </div>
+
+      <div class="cover-showcase-grid">
+        <div class="cover-featured-stage" id="backcoverFeaturedStage" onclick="openDetail(currentBackcoverIdx)">
+          <div class="cover-featured-art" id="backcoverArtBox"></div>
+          <div class="cover-featured-info">
+            <div>
+              <span class="portal-badge" id="backcoverBadge" style="color:var(--orange-primary); background:var(--orange-soft); padding:4px 10px; border-radius:999px; font-family:var(--font-mono); font-size:11px;">作品 01 · 主推案例</span>
+              <h3 style="font-family:var(--font-display); font-size:26px; margin:6px 0 2px;" id="backcoverTitle">own your sh*t</h3>
+              <p style="font-size:13.5px; color:var(--ink-secondary);" id="backcoverDesc">把「用户丢弃行为」转成「产品反馈」的循环设计 · 有效反馈转化率 +42%</p>
+            </div>
+            <span class="pill-action" style="background:var(--ink-primary); color:var(--bg-pure);">查看完整详情 →</span>
+          </div>
+        </div>
+
+        <div class="cover-rail" id="backcoverRail"></div>
+      </div>
+
+      <div style="display:flex; justify-content:center; gap:14px; margin: 28px 0;">
+        <button class="dock-btn primary" onclick="navigate('contact')">回到联系方式</button>
+        <button class="dock-btn soft" onclick="navigate('works')">回作品总览</button>
+        <button class="dock-btn soft" onclick="navigate('home')">回到封面</button>
+      </div>
+
+      <div class="status-footer-strip">
+        <div class="status-footer-cell">
+          <div class="meta-stat-label">本作品集版本</div>
+          <div class="meta-stat-val">v2.6 · 2026 / 10</div>
+        </div>
+        <div class="status-footer-cell">
+          <div class="meta-stat-label">下次更新节点</div>
+          <div class="meta-stat-val">毕业设计展完工时</div>
+        </div>
+        <div class="status-footer-cell">
+          <div class="meta-stat-label">构建与维护</div>
+          <div class="meta-stat-val">独立矢量构建 · 真实咬合拼图</div>
+        </div>
+        <div class="status-footer-cell">
+          <div class="meta-stat-label">离开节点</div>
+          <div class="meta-stat-val">这就是整套浏览流程的终点 ✨</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05. 作品总览 -->
+    <section id="view-works" class="page-view">
+
+      <div class="works-stage-grid">
+        <aside class="works-editorial-index" aria-label="精选作品目录">
+          <h1 class="works-index-heading"><span>SELECTED</span><span>WORKS</span></h1><div class="works-category-tabs" role="group" aria-label="作品分类"><button class="filter-pill active" aria-pressed="true" onclick="filterWorks('all',this)">精选作品</button><button class="filter-pill" aria-pressed="false" onclick="filterWorks('brand',this)">品牌与产品</button><button class="filter-pill" aria-pressed="false" onclick="filterWorks('ux',this)">服务设计</button><button class="filter-pill" aria-pressed="false" onclick="filterWorks('space',this)">数字艺术</button></div>
+          <div class="works-thumb-stack" id="worksThumbStack"></div>
+        </aside>
+
+        <div class="works-bigshot-stage">
+          <div class="bigshot-visual-canvas" id="worksBigshotCanvas"></div>
+          <div class="bigshot-footer-bar">
+            <div class="bigshot-copy">
+              <h2 class="bigshot-title" id="worksBigshotTitle">own your sh*t</h2>
+              <p id="worksBigshotSummary">
+                聚焦新加坡造口患者出院后前 30 天的生活适应难题，将便携护理包、渐进式城市打卡与护理用品优惠相结合，帮助患者减轻外出顾虑，逐步重建生活信心、回归日常。
+              </p>
+            </div>
+            <div style="display:flex; gap:10px; white-space:nowrap;">
+              <button class="dock-btn orange" onclick="openDetail(currentWorkIdx)">
+                <span>打开完整详情 →</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06–09. 作品完整详情页 -->
+    <section id="view-detail" class="page-view">
+      <div class="crumb-bar">
+        <div class="crumb-links">
+          <a onclick="navigate('works')">← 作品总览</a>
+          <span>/</span>
+          <span id="detailCrumbTitle" style="color:var(--ink-primary);">own your sh*t</span>
+        </div>
+      </div>
+
+      <div class="detail-split-layout">
+        <div class="detail-left-gallery">
+          <div class="detail-gallery-tabs" id="detailGalleryTabs" hidden role="group" aria-label="图片内容切换"><button type="button" data-mode="results" onclick="switchDetailGallery('results')">作品成果</button><button type="button" data-mode="process" onclick="switchDetailGallery('process')">设计过程</button></div>
+          <div class="photo-stream-pane" id="detailPhotoStream"></div>
+        </div>
+
+        <aside class="detail-right-dossier" id="detailRightDossier"></aside>
+      </div>
+
+      <div class="detail-bottom-nav">
+        <button class="dock-btn soft" id="detailPrevBtn" onclick="prevDetailWork()">← 上一个作品</button>
+        <button class="dock-btn" id="detailContactBtn" onclick="navigate('about')" style="visibility:hidden">关于与联系</button>
+        <button class="dock-btn orange" id="detailNextBtn" onclick="nextDetailWork()">下一个作品 →</button>
+      </div>
+    </section>
+
+    <!-- 10–12. 异常状态页 -->
+    <section id="view-state" class="page-view">
+      <div class="crumb-bar">
+        <div class="crumb-links">
+          <a onclick="navigate('works')">← 返回作品总览</a>
+          <span>/</span>
+          <span style="color:var(--ink-primary);">异常防御与容错状态设计 (f10 – f12)</span>
+        </div>
+        <span>设计说明：不浪费 HR 时间，在网络慢或资源异常时提供优雅回退</span>
+      </div>
+
+      <div class="state-center-stage">
+        <div class="state-switcher-bar">
+          <button class="mode-tab active" id="stateTab10" onclick="renderStateScreen(10)">10 · 加载较慢状态</button>
+          <button class="mode-tab" id="stateTab11" onclick="renderStateScreen(11)">11 · 单张图片缺失回退</button>
+          <button class="mode-tab" id="stateTab12" onclick="renderStateScreen(12)">12 · 加载超时保护</button>
+        </div>
+
+        <div class="state-art-box" id="stateArtContainer"></div>
+
+        <div style="max-width:560px;">
+          <h2 style="font-family:var(--font-display); font-size:30px; margin-bottom:8px;" id="stateHeadline">加载有点慢 ⏱</h2>
+          <p style="font-size:14.5px; color:var(--ink-secondary); margin-bottom:24px;" id="stateSubline">
+            高清过程图正在路上（预计 15 秒以内）；如果你赶时间，可以先看纯文字摘要或直接返回总览。
+          </p>
+        </div>
+
+        <div style="display:flex; gap:12px;">
+          <button class="dock-btn primary" onclick="navigate('works')">← 返回作品总览</button>
+          <button class="dock-btn soft" onclick="openDetail(currentWorkIdx)">重试加载当前作品</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PDF 简历弹窗 -->
+  <div id="resumeModal" class="modal-backdrop" onclick="if(event.target===this) closeResumeModal()">
+    <div class="resume-sheet-modal">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:28px; padding-bottom:20px; border-bottom:1px solid rgba(20,20,19,0.08);">
+        <div>
+          <div class="section-eyebrow">CURRICULUM VITAE · 2026</div>
+          <h2 style="font-family:var(--font-display); font-size:32px;">么明祎 Yao Mingyi</h2>
+          <p style="color:var(--ink-secondary); font-size:14px;">艺术设计本科（2026 应届） · 产品体验与品牌视觉设计师</p>
+        </div>
+        <div style="display:flex; gap:10px;">
+          <button class="dock-btn primary" onclick="window.print()">🖨️ 打印 / 导出 PDF</button>
+          <button class="dock-btn soft" onclick="closeResumeModal()">✕ 关闭</button>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns: 1fr 2fr; gap:32px; font-size:13.5px;">
+        <div style="display:flex; flex-direction:column; gap:18px;">
+          <div>
+            <strong style="display:block; margin-bottom:4px;">联系方式</strong>
+            <div style="color:var(--ink-secondary);">ymy01000600@163.com<br/>+86 132 8425 8395<br/>微信：ymy_010101</div>
+          </div>
+          <div>
+            <strong style="display:block; margin-bottom:4px;">教育背景</strong>
+            <div style="color:var(--ink-secondary);">美术学院 · 艺术设计专业<br/>2022.09 – 2026.06<br/>GPA 3.86 / 4.0 (专业前 10%)</div>
+          </div>
+          <div>
+            <strong style="display:block; margin-bottom:4px;">核心技能</strong>
+            <div style="color:var(--ink-secondary);">用户研究、信息架构、交互原型、视觉系统、IP 插画设定、可用性测试、HTML/CSS</div>
+          </div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:18px;">
+          <div>
+            <strong style="display:block; font-size:15px; margin-bottom:6px;">代表作品与项目成果</strong>
+            <p style="color:var(--ink-secondary); margin-bottom:10px;">
+              <strong>01 · own your sh*t（UX 与微交互反馈设计）</strong><br/>
+              针对用户在取消、删除、清空操作时的情绪断层，将单向丢弃行为改造为轻量级产品反馈闭环，上线验证后有效问题反馈率提升 42%。
+            </p>
+            <p style="color:var(--ink-secondary); margin-bottom:10px;">
+              <strong>02 · 学院猫敦煌季（品牌视觉与 IP 插画）</strong><br/>
+              采集校内 12 只流浪猫的毛色与性格特征，结合敦煌藻井与飞天飘带色彩体系完成群像设定，首批文创众筹 48 小时售罄。
+            </p>
+            <p style="color:var(--ink-secondary); margin-bottom:10px;">
+              <strong>03 · 山谷猫咪之家（公益收容所视觉规范系统）</strong><br/>
+              为线下猫咪救助站建立零门槛导视系统、猫咪性格铭牌与领养日社媒组件库，帮助领养咨询转化提升 28%。
+            </p>
+            <p style="color:var(--ink-secondary);">
+              <strong>04 · 川（空间交互装置研究）</strong><br/>
+              利用延时投影与声音位移探讨人在「时间错位」下的空间感知，于学院年度展吸引 600+ 观众现场互动记录。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toastMsg" class="toast-msg">已复制到剪贴板</div>
+
+  <script>
+    // 悬浮拼图块平滑放大直至全屏转场动画 (Smooth Scale-to-Fullscreen Zoom)
+    let isFloatingZooming = false;
+    function triggerFloatingPieceZoom(e) {
+      if (isFloatingZooming) return;
+      isFloatingZooming = true;
+      const piece = document.getElementById('floatingPuzzlePiece');
+      const clone = document.getElementById('fullscreenZoomClone');
+      if (!piece || !clone) {
+        navigate('works');
+        isFloatingZooming = false;
+        return;
+      }
+
+      const rect = piece.getBoundingClientRect();
+      clone.style.display = 'block';
+      clone.style.top = rect.top + 'px';
+      clone.style.left = rect.left + 'px';
+      clone.style.width = rect.width + 'px';
+      clone.style.height = rect.height + 'px';
+      clone.style.opacity = '1';
+      clone.style.transform = 'rotate(-5deg)';
+
+      clone.offsetHeight;
+
+      clone.style.top = '0px';
+      clone.style.left = '0px';
+      clone.style.width = '100vw';
+      clone.style.height = '100vh';
+      clone.style.borderRadius = '0px';
+      clone.style.transform = 'rotate(0deg)';
+      clone.style.boxShadow = 'none';
+
+      setTimeout(() => {
+        navigate('hub');
+        setTimeout(() => {
+          clone.style.opacity = '0';
+          setTimeout(() => {
+            clone.style.display = 'none';
+            clone.style.borderRadius = '36px';
+            isFloatingZooming = false;
+          }, 350);
+        }, 120);
+      }, 580);
+    }
+
+    const WORKS_DATA = [
+      {
+        id: 'f06',
+        overviewType: '服务设计',
+        overviewCategory: 'SERVICE',
+        overviewDate: '2025.08–2025.12',
+        overviewSummary: '面向新加坡造口患者出院后前 30 天，以便携护理包、城市打卡和护理优惠，支持患者重拾外出信心、回归日常。',
+        cover: { image: './作品一own%20your%20shit/微信图片_20260326152138.jpg', alt: 'own your sh*t 完整展陈，展示产品原型、视觉展板与设计成果' },
+        num: '01',
+        category: 'ux',
+        title: 'own your sh*t',
+        tags: ['UX 机制', '微交互视觉', '2025'],
+        metaLine: 'UX 设计 · 行为反馈闭环 · 2025',
+        shortThesis: '把「用户丢弃行为」转成「产品反馈」的循环设计',
+        summary: '聚焦新加坡造口患者出院后前 30 天的生活适应难题，将便携护理包、渐进式城市打卡与护理用品优惠相结合，帮助患者减轻外出顾虑，逐步重建生活信心、回归日常。',
+        projectIntroduction: [
+          'own your sh*t 是一项在新加坡开展、历时四个月的团队服务设计项目，关注造口患者从医院回到日常生活的关键过渡期——出院后的前 30 天。',
+          '团队通过线上与线下访谈，了解当地造口患者在护理成本、术后身体适应与社会交往中的多重困境：持续的护理开支带来经济压力，身体不适与护理经验不足增加外出难度，对造口袋泄漏和他人目光的担忧则进一步削弱了患者参与日常活动的信心。同时，团队围绕当地相关身份认定、福利支持及专用卫生设施开展调研，梳理患者需求与现有支持资源之间的衔接机会。',
+          '基于研究，团队提出一套连接出院准备、日常护理与城市探索的服务方案：患者可在出院前领取模块化造口护理包，用于收纳外出所需的护理用品；包体支持拆卸与多种佩戴方式，适应不同的使用情境。配合包内感应工具，方案规划了由居住地周边逐步拓展至全城的打卡网络，并将阶段性打卡成果与护理用品优惠相连接，以循序渐进的行动激励，支持患者重新走出家门。',
+          '项目同时通过专属吉祥物、包体造型与系列宣传海报建立统一的视觉语言，提升公众对造口群体的认知，传递更友善、包容的社会态度。经过多轮迭代，团队完成了服务方案、产品原型及视觉物料，并通过最终展陈与汇报呈现设计成果。'
+        ],
+        role: '主设计师 · 独立完成研究、交互推演与动效规范（协同 2 名研发）',
+        timeline: '2025.09 – 2025.11 · 共 8 周',
+        industry: 'B/C 端创造力工具 SaaS',
+        metrics: '上线后主动反馈率 +42% · 误删找回满意度 94%',
+        contribution: '主导 18 位重度用户深访与日志分析，设计「揉纸团物理反馈 + 0.8 秒无感归因胶囊」组件，并输出完整 Lottie 与状态机文档。',
+        humanNote: '名字听起来有点叛逆，其实灵感来自我们在自己画室里揉废纸团的瞬间——既然每次放弃废稿都是创作的一部分，为什么数字软件里的「删除」那么冰冷？',
+        heroSvg: () => `
+          <svg width="100%" height="320" viewBox="0 0 760 320" fill="none">
+            <rect width="760" height="320" rx="20" fill="#FFFFFF"/>
+            <circle cx="150" cy="160" r="68" fill="#FAF9F6" stroke="#141413" stroke-width="1.8" stroke-dasharray="5 5"/>
+            <rect x="116" y="132" width="68" height="56" rx="10" fill="#141413"/>
+            <text x="150" y="165" text-anchor="middle" fill="#FFFFFF" font-family="monospace" font-size="12">DISCARD</text>
+            <path d="M235 140 C 310 75, 430 75, 505 140" stroke="#FF6B35" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <polygon points="508,142 496,134 500,147" fill="#FF6B35"/>
+            <path d="M505 185 C 430 250, 310 250, 235 185" stroke="#141413" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+            <rect x="305" y="138" width="150" height="44" rx="22" fill="#FAF9F6" stroke="#141413" stroke-width="1.5"/>
+            <text x="380" y="165" text-anchor="middle" fill="#141413" font-size="13" font-weight="600">情绪缓冲 · 归因信号</text>
+            <circle cx="600" cy="160" r="72" fill="rgba(255,107,53,0.08)"/>
+            <circle cx="600" cy="160" r="52" fill="#FF6B35"/>
+            <text x="600" y="156" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="22" font-weight="bold">+42%</text>
+            <text x="600" y="176" text-anchor="middle" fill="#FFFFFF" font-size="11">有效反馈闭环</text>
+          </svg>
+        `,
+        plates: [
+          { title: '线下展览 · 项目空间与成果陈列', sub: '项目视觉、原型和过程资料的整体展陈 · 1 / 7', tag: 'EXHIBITION', metric: '项目落地展示', image: './作品一own%20your%20shit/微信图片_20260326152138.jpg', alt: 'own your sh*t 项目展览现场全景，包含展板、产品原型与模型' },
+          { title: '项目主视觉 · 展览成果总览', sub: 'own your sh*t 项目展板、用户旅程与设计成果 · 2 / 7', tag: 'PROJECT OVERVIEW', metric: '完整项目展示', image: './作品一own%20your%20shit/微信图片_20260326152156.jpg', alt: 'own your sh*t 项目展板，展示用户旅程、产品概念与使用场景' },
+          { title: '产品原型 · 可穿戴辅助设计', sub: '原型二的穿戴形态与细节展示 · 3 / 7', tag: 'PROTOTYPE 02', metric: '实体产品原型', image: './作品一own%20your%20shit/微信图片_20260326152142.jpg', alt: '穿戴在人体模型上的黑色产品原型与花朵视觉元素' },
+          { title: '产品原型 · 使用场景模型', sub: '原型一、角色模型与使用场景的组合呈现 · 4 / 7', tag: 'PROTOTYPE 01', metric: '场景模型', image: './作品一own%20your%20shit/微信图片_20260326152146.jpg', alt: '产品原型一与角色模型的场景展示' },
+          { title: '使用情境 · 产品穿戴展示', sub: '通过穿戴展示产品形态与日常使用方式 · 5 / 7', tag: 'USER SCENARIO', metric: '穿戴体验', image: './作品一own%20your%20shit/微信图片_20260326152149.jpg', alt: '穿戴在人体模型上的蓝灰色包袋原型及产品说明' },
+          { title: '设计过程 · 研究手册与视觉系统', sub: '项目过程手册、视觉物料与展览延展的记录 · 6 / 7', tag: 'DESIGN PROCESS', metric: '过程与视觉延展', image: './作品一own%20your%20shit/微信图片_20260326152152.jpg', alt: 'own your sh*t 展览中的项目手册、视觉物料与研究过程展示' },
+          { title: '研究过程 · 用户洞察与行为地图', sub: '研究展板与用户反馈信息的现场展示 · 7 / 7', tag: 'USER RESEARCH', metric: '研究与洞察', image: './作品一own%20your%20shit/微信图片_20260326152128.jpg', alt: 'own your sh*t 用户研究墙面展板与研究成果陈列' }
+        ]
+      },
+      {
+        id: 'f07',
+        overviewType: '文创设计',
+        overviewCategory: 'CULTURAL DESIGN',
+        overviewDate: '2026.03–2026.06',
+        overviewSummary: '融合学院猫 IP 与敦煌文化，设计眼镜布与丝巾，通过插画、纹样及实物打样，让传统文化走近日常，助力流浪猫公益。',
+        cover: { image: './作品二学院猫敦煌季/01-敦煌猫咪方巾设计.jpg', alt: '学院猫敦煌季方巾主视觉，融合敦煌纹样、飞天飘带与猫咪形象' },
+        num: '02',
+        category: 'brand',
+        title: '学院猫敦煌季',
+        tags: ['品牌视觉', 'IP 插画', '2025'],
+        metaLine: '校园文化 IP · 传统色彩转译 · 2025',
+        shortThesis: '学院 12 只流浪猫的敦煌风 IP 群像与文创系统',
+        summary: '以北师大珠海校区流浪猫 IP“学院猫”为载体，将敦煌文化转化为兼具趣味与文化辨识度的眼镜布、丝巾设计。通过场景化插画、传统纹样再创作与多轮实物打样，连接校园情感、传统文化与流浪动物公益。',
+        projectIntroduction: [
+          '“学院猫敦煌季”是一次将校园原创 IP 与敦煌文化相结合的文创设计实践，隶属于《东方当代表达》项目的“东方宠”板块。',
+          '“学院猫”由北京师范大学未来设计学院学生设计，以珠海校区的三只流浪猫——如意、小壁灯与小海绵为原型，塑造具有校园情感联结的 Q 版猫咪形象。该 IP 通过文创产品、表情包获得的盈利，全部捐赠给校区流浪猫公益组织“山谷猫咪之家”，用于流浪猫的日常伙食与医疗支出。',
+          '本次设计围绕眼镜布与丝巾两类日常用品展开，探索学院猫形象与敦煌文化在不同产品载体上的融合方式。眼镜布以“三只小猫出游敦煌”为叙事线索，将角色融入沙漠旅行场景，通过生动的姿态与画面关系，构建轻松、鲜活的敦煌游记；丝巾则从敦煌藻井与“三兔共耳”图案中汲取灵感，将猫咪形象、环绕式构图与装饰纹样相结合，形成富有秩序与动感的图案设计。',
+          '两款图案均采用鲜明的敦煌配色，在保持学院猫 IP 亲和力的同时，建立统一的系列视觉语言。设计完成后，通过与生产厂家的多轮沟通和打样，持续检验图案在实际材质上的呈现效果，推进从平面设计到实体产品的转化。'
+        ],
+        role: '主创视觉设计师 · 独立完成猫咪采风、角色设定与延展包装',
+        timeline: '2025.03 – 2025.06 · 共 12 周',
+        industry: '文化文创 · 品牌视觉叙事',
+        metrics: '校内外媒体报道 3.2w+ 阅读 · 首批周边 48h 售罄',
+        contribution: '完成全部 12 只猫咪的性格考据与敦煌飞天/瑞兽造型结合，建立矿物色卡规范，并跟进丝网印刷与特种纸打样落地。',
+        humanNote: '为了画准「断尾橘」和「警长猫」趴在画室窗台上的神态，我在速写本里记了整整三周的喂猫日记。每只猫的飞天飘带走向，其实都对应它真实的跳跃习惯。',
+        heroSvg: () => `
+          <svg width="100%" height="320" viewBox="0 0 760 320" fill="none">
+            <rect width="760" height="320" rx="20" fill="#FFFFFF"/>
+            <circle cx="380" cy="160" r="118" stroke="#FF6B35" stroke-width="1.5" stroke-dasharray="6 4"/>
+            <circle cx="380" cy="160" r="88" fill="#FAF9F6" stroke="#141413" stroke-width="1.6"/>
+            <polygon points="380,56 470,160 380,264 290,160" stroke="#2D6A4F" stroke-width="1.4" fill="none"/>
+            <path d="M352 142 L358 118 L372 132 L388 132 L402 118 L408 142 C414 166, 402 190, 380 190 C358 190, 346 166, 352 142 Z" fill="#141413"/>
+            <circle cx="368" cy="154" r="3.5" fill="#FAF9F6"/>
+            <circle cx="392" cy="154" r="3.5" fill="#FAF9F6"/>
+            <path d="M240 190 Q 300 120, 345 155" stroke="#FF6B35" stroke-width="3" stroke-linecap="round" fill="none"/>
+            <path d="M415 155 Q 465 195, 525 130" stroke="#2D6A4F" stroke-width="3" stroke-linecap="round" fill="none"/>
+            <g transform="translate(76, 96)">
+              <rect width="96" height="28" rx="6" fill="#FF6B35"/><text x="48" y="18" text-anchor="middle" fill="#FFF" font-size="11">朱砂 · 断尾橘</text>
+              <rect y="40" width="96" height="28" rx="6" fill="#2D6A4F"/><text x="48" y="58" text-anchor="middle" fill="#FFF" font-size="11">石绿 · 图书馆三花</text>
+              <rect y="80" width="96" height="28" rx="6" fill="#141413"/><text x="48" y="98" text-anchor="middle" fill="#FFF" font-size="11">松烟墨 · 警长</text>
+            </g>
+            <g transform="translate(566, 112)">
+              <text x="0" y="20" fill="#141413" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="24" font-weight="bold">12 瑞猫图谱</text>
+              <text x="0" y="46" fill="#4A4845" font-size="12.5">莫高窟藻井纹样 × 校园真实生灵</text>
+              <text x="0" y="68" fill="#FF6B35" font-family="monospace" font-size="12">SOLD OUT IN 48H</text>
+            </g>
+          </svg>
+        `,
+        plates: [
+          { title: '敦煌猫咪 · 方巾图案设计', image: './作品二学院猫敦煌季/01-敦煌猫咪方巾设计.jpg', alt: '敦煌纹样与三只猫咪结合的蓝色方巾图案设计' },
+          { title: '文创实物 · 方巾展示', image: './作品二学院猫敦煌季/02-方巾实物展示.jpg', alt: '蓝色敦煌猫咪方巾在人台上的实物展示' },
+          { title: '猫咪出游 · 沙漠主题插画', image: './作品二学院猫敦煌季/03-沙漠猫咪插画.jpg', alt: '三只猫咪在彩色沙漠中的旅行主题插画' },
+          { title: '文创延展 · 眼镜布与配饰', image: './作品二学院猫敦煌季/04-眼镜布文创展示.jpg', alt: '猫咪插画眼镜布、眼镜盒与猫咪挂饰眼镜链展示' }
+        ]
+      },
+      {
+        id: 'f08',
+        overviewType: '品牌与文创',
+        overviewCategory: 'BRAND',
+        overviewDate: '2024.09–2025.03',
+        overviewSummary: '为校园流浪猫公益组织设计 Logo、宣传包装与猫咪晴雨伞，以亲和的视觉形象连接校园生活与动物救助。',
+        cover: { image: './作品三山谷猫咪之家/01-圆形品牌标志.png', alt: '山谷猫咪之家圆形 Logo，融合猫咪、山谷与爱心元素' },
+        num: '03',
+        category: 'brand',
+        title: '山谷猫咪之家',
+        tags: ['IP 形象', '视觉规范系统', '2024'],
+        metaLine: '公益收容所品牌系统 · 导视与信息设计 · 2024',
+        shortThesis: '流浪猫公益收容所的完整视觉与领养信息系统',
+        summary: '为北京师范大学珠海校区流浪猫公益组织设计品牌标志与系列文创，将校园猫咪转化为具有情感辨识度的视觉形象。通过双款 Logo、宣传卡与猫咪晴雨伞，连接公益传播和日常使用，让流浪猫救助走进校园生活。',
+        projectIntroduction: [
+          '“山谷猫咪之家”是由北京师范大学珠海校区学生自发组织的流浪猫公益协会，持续开展校内流浪猫的绝育、喂食与疾病救治工作，相关经营盈利全部用于本校流浪猫救助事业。',
+          '本项目围绕组织的品牌识别、宣传触点与文创产品展开设计，探索如何以亲和、易于传播的视觉语言，让校园公益获得更广泛的关注与参与。',
+          '品牌识别方面，设计两款适用于不同传播场景的 Logo，将猫咪、山谷与爱心元素融为一体，传达组织的校园归属与关怀理念。同时完成文创包装卡头、卡背设计，将组织联系方式与二维码融入版面，使产品包装兼具品牌展示、信息传递与公益引流的作用。',
+          '文创产品方面，结合广东雨水频繁、日照强烈的气候特点，选择学生高频使用的晴雨伞作为设计载体。将 13 只猫咪转化为各具特征的 Q 版大头形象，围绕伞面形成生动的群像构图，让校园猫咪成为能够陪伴日常出行的情感符号。',
+          '产品推出后获得校内学生的积极购买与使用，形成较高的校园可见度。晴雨伞也由此成为流动的公益传播载体，在满足日常需求的同时，扩大组织影响力，为校园流浪猫救助带来持续关注与支持。'
+        ],
+        role: '品牌与系统设计师 · 负责品牌识别、空间导视与领养卡组件库',
+        timeline: '2024.06 – 2024.10 · 共 10 周',
+        industry: '社会公益 · 品牌视觉与服务设计',
+        metrics: '线下领养咨询率 +28% · 志愿者排版耗时缩短 70%',
+        contribution: '设计山谷屋檐图形标志、猫咪性格四维雷达卡（亲人度/活泼度/健康/年龄），并交付 Canva/Figma 零门槛模板。',
+        humanNote: '收容所的阿姨平时根本没时间打开 Photoshop。所以我给自己定了一条死规矩：这套视觉系统如果不能让志愿者在 3 分钟内生成一张好看的待领养猫咪名片，那就是不合格的设计。',
+        heroSvg: () => `
+          <svg width="100%" height="320" viewBox="0 0 760 320" fill="none">
+            <rect width="760" height="320" rx="20" fill="#FFFFFF"/>
+            <path d="M120 220 L185 110 L230 175 L275 110 L340 220 Z" fill="#FAF9F6" stroke="#141413" stroke-width="2.2" stroke-linejoin="round"/>
+            <circle cx="230" cy="185" r="22" fill="#FF6B35"/>
+            <rect x="410" y="68" width="260" height="184" rx="16" fill="#FAF9F6" stroke="#141413" stroke-width="1.6"/>
+            <rect x="434" y="92" width="64" height="64" rx="12" fill="#FFFFFF" stroke="#141413" stroke-width="1.4"/>
+            <text x="466" y="129" text-anchor="middle" font-family="monospace" font-size="12" fill="#141413">CAT #07</text>
+            <text x="514" y="112" font-size="15" font-weight="bold" fill="#141413">小谷 · 2岁已绝育</text>
+            <text x="514" y="134" font-size="12" fill="#4A4845">亲人指数 ●●●●○</text>
+            <rect x="434" y="176" width="212" height="10" rx="5" fill="#EBE9E2"/>
+            <rect x="434" y="176" width="164" height="10" rx="5" fill="#2D6A4F"/>
+            <text x="434" y="216" font-family="monospace" font-size="11" fill="#8C8984">3-MIN VOLUNTEER TEMPLATE SYSTEM</text>
+          </svg>
+        `,
+        plates: [
+          { title: '品牌识别 · 圆形标志', image: './作品三山谷猫咪之家/01-圆形品牌标志.png', alt: '山谷猫咪之家圆形品牌标志，结合绿色猫咪、山谷与爱心元素' },
+          { title: '品牌识别 · 组合标志', image: './作品三山谷猫咪之家/02-品牌组合标志.png', alt: '山谷猫咪之家猫咪图形、中英文品牌名称与猫爪组合标志' },
+          { title: '公益传播 · 宣传设计', image: './作品三山谷猫咪之家/03-公益宣传设计.jpg', alt: '山谷猫咪之家公益宣传设计，包含品牌名称、社交平台二维码与让爱终止流浪标语' },
+          { title: '品牌视觉 · 宣传海报', image: './作品三山谷猫咪之家/04-品牌视觉海报.jpg', alt: '浅绿色棋盘格背景的山谷猫咪之家品牌海报' },
+          { title: '文创设计 · 猫咪伞面', image: './作品三山谷猫咪之家/05-猫咪伞面设计.png', alt: '浅蓝色八角伞面设计，周围环绕不同花色与表情的猫咪插画' },
+          { title: '文创实物 · 雨伞展开', image: './作品三山谷猫咪之家/06-雨伞展开实物.jpg', alt: '猫咪插画雨伞展开后的伞面实物展示' },
+          { title: '文创实物 · 雨伞收纳', image: './作品三山谷猫咪之家/07-雨伞收纳实物.jpg', alt: '猫咪插画折叠伞收起后放置在木质展示格中的实物照片' }
+        ]
+      },
+      {
+        id: 'f09',
+        overviewType: '动态影像',
+        overviewCategory: 'MOTION',
+        overviewDate: '2026.10',
+        overviewSummary: '提取“川”字的线条与流动意象，运用 TouchDesigner 创作蓝紫色粒子影像，探索汉字形态与动态视觉的融合。',
+        cover: { image: './作品四Dislocation/视频封面.jpg', alt: '川 · 蓝紫色粒子流动影像' },
+        num: '04',
+        category: 'space',
+        title: '川',
+        tags: ['空间研究', '交互装置', '2025'],
+        metaLine: '新媒体交互装置 · 空间感知实验 · 2025',
+        shortThesis: '交互装置：人如何理解「时间错位」下的物理空间',
+        summary: '以汉字“川”为视觉起点，提取其线性结构与流动意象，运用 TouchDesigner 将静态字形转化为流动的粒子影像，探索文字形态、运动节奏与数字材质之间的视觉关系。',
+        projectIntroduction: [
+          '《川》是一项使用 TouchDesigner 创作的实验性动态影像，以汉字形态的动态转译为切入点，探索文字与粒子视觉的融合表达。',
+          '作品从“川”字的线条结构与水流联想出发，将文字从静态、明确的轮廓中释放，以粒子的聚散、延展与流动重新组织画面。字形在运动中呈现出柔和、连续的形态，使文字既是构图的起点，也成为动态视觉生成的线索。',
+          '创作侧重粒子形态、运动节奏与色彩层次之间的协调，通过蓝紫色调与细密的粒子质感，形成轻盈、流动的画面效果，在具象字形与抽象影像之间建立联系。',
+          '项目以视觉表现为核心，将汉字的形式特征转化为具有节奏与观赏性的影像语言，呈现文字在数字媒介中的另一种感知方式。'
+        ],
+        role: '装置主创 & 交互逻辑设计 · 负责空间动线、视觉生成与现场观察记录',
+        timeline: '2025.04 – 2025.07 · 共 9 周',
+        industry: '实验艺术 · 空间交互与感知研究',
+        metrics: '640+ 位现场观众互动 · 收集 120 份空间行为轨迹样本',
+        contribution: '搭建深度相机延时缓存投影系统，设计地面坐标网格与声场反馈，并把 640 位观众的驻足、回望与互动行为可视化。',
+        humanNote: '展览现场最打动我的一幕，是一位观众发现墙上的影子比自己慢 3 秒后，特地停下来转身对着「3 秒前的自己」挥了挥手。技术只是媒介，人的本能反应才是作品真正完成的那一刻。',
+        heroSvg: () => `
+          <svg width="100%" height="320" viewBox="0 0 760 320" fill="none">
+            <rect width="760" height="320" rx="20" fill="#FFFFFF"/>
+            <line x1="90" y1="160" x2="670" y2="160" stroke="#141413" stroke-width="1.2"/>
+            <line x1="380" y1="36" x2="380" y2="284" stroke="#141413" stroke-width="1.2" stroke-dasharray="4 4"/>
+            <circle cx="290" cy="160" r="76" stroke="#141413" stroke-width="1.6"/>
+            <circle cx="380" cy="160" r="76" stroke="#FF6B35" stroke-width="1.8" stroke-dasharray="6 4"/>
+            <circle cx="470" cy="160" r="76" stroke="#141413" stroke-opacity="0.3" stroke-width="1.6"/>
+            <circle cx="290" cy="160" r="5" fill="#141413"/>
+            <text x="290" y="138" text-anchor="middle" font-family="monospace" font-size="11" fill="#141413">T = 0.0s (身体)</text>
+            <circle cx="380" cy="160" r="5" fill="#FF6B35"/>
+            <text x="380" y="192" text-anchor="middle" font-family="monospace" font-size="11" fill="#FF6B35">T - 3.5s (延时残影)</text>
+            <circle cx="470" cy="160" r="5" fill="#8C8984"/>
+            <text x="470" y="138" text-anchor="middle" font-family="monospace" font-size="11" fill="#8C8984">T - 7.0s (他人记忆)</text>
+          </svg>
+        `,
+        plates: [
+          { title: 'TouchDesigner · 动态影像演示', video: './作品四Dislocation/作品预览.webm', poster: './作品四Dislocation/视频封面.jpg' }
+        ]
+      }
+,
+{
+  "id": "campus-guide",
+  "num": "05",
+  "overviewType": "服务设计",
+  "overviewCategory": "SERVICE",
+  "overviewDate": "2026.05—2026.06",
+  "title": "BNUZH 游客导览系统",
+  "category": "ux",
+  "tags": [
+    "服务设计",
+    "校园导览",
+    "信息设计"
+  ],
+  "metaLine": "校园游客地图与导览系统设计",
+  "shortThesis": "",
+  "summary": "面向初次到访北师大珠海校区的游客，整合建筑插画、公共服务图标、移动端地图与实体路牌，设计清晰、连贯的校园导览方案，帮助访客寻找目的地、了解校园并规划出行。",
+  "overviewSummary": "面向初次到访北师大珠海校区的游客，整合建筑插画、公共服务图标、移动端地图与实体路牌，设计清晰、连贯的校园导览方案，帮助访客寻找目的地、了解校园并规划出行。",
+  "projectIntroduction": [
+    "本项目面向北师大珠海校区的研学学生、交流宾客、师生亲友等外来访客。针对现有路牌指引不足、地图信息繁杂，以及通用导航偏重车行路线等问题，探索更适合校园步行参观的导览方式。",
+    "以“看得懂、找得到、跟着走”为目标，整合游客地图、移动端界面与实体路牌。地图筛选游客所需信息，通过建筑插画与分类图标，突出地标建筑、餐饮、卫生间、校门及电瓶车站点，帮助访客将图上信息与真实环境对应。",
+    "移动端方案围绕地点搜索、位置识别、建筑介绍与路线查询展开；线下路牌沿用统一的视觉语言，并通过二维码衔接线上地图，为游客从入校、游览到离校提供连贯指引。",
+    "完成游客导览地图、校园建筑插画、公共服务图标、移动端界面及实体路牌方案，在提高寻路效率的同时，呈现校园建筑与人文特色。"
+  ],
+  "timeline": "2026.05 — 2026.06",
+  "industry": "",
+  "metrics": "",
+  "contribution": "",
+  "role": "",
+  "humanNote": "",
+  "cover": {
+    "title": "游客导览地图",
+    "image": "./作品五校园游客导览/01-游客导览地图.png",
+    "alt": "游客导览地图",
+    "tag": "VISITOR MAP",
+    "metric": ""
+  },
+  "plates": [
+    {
+      "title": "游客导览地图",
+      "image": "./作品五校园游客导览/01-游客导览地图.png",
+      "alt": "游客导览地图",
+      "tag": "VISITOR MAP",
+      "metric": ""
+    },
+    {
+      "title": "移动端导览界面",
+      "image": "./作品五校园游客导览/02-移动端导览界面.png",
+      "alt": "移动端导览界面",
+      "tag": "DESIGN",
+      "metric": ""
+    },
+    {
+      "title": "公共服务图标",
+      "image": "./作品五校园游客导览/03-公共服务图标.png",
+      "alt": "公共服务图标",
+      "tag": "DESIGN",
+      "metric": ""
+    },
+    {
+      "title": "建筑插画-金声楼图书馆元白楼",
+      "image": "./作品五校园游客导览/04-建筑插画-金声楼图书馆元白楼.png",
+      "alt": "建筑插画-金声楼图书馆元白楼",
+      "tag": "DESIGN",
+      "metric": ""
+    },
+    {
+      "title": "建筑插画-立身轩励耘楼理工综合体",
+      "image": "./作品五校园游客导览/05-建筑插画-立身轩励耘楼理工综合体.png",
+      "alt": "建筑插画-立身轩励耘楼理工综合体",
+      "tag": "DESIGN",
+      "metric": ""
+    },
+    {
+      "title": "建筑插画-图书馆弘文楼乐育楼",
+      "image": "./作品五校园游客导览/06-建筑插画-图书馆弘文楼乐育楼.png",
+      "alt": "建筑插画-图书馆弘文楼乐育楼",
+      "tag": "DESIGN",
+      "metric": ""
+    },
+    {
+      "title": "建筑插画-励教楼丽泽楼风雨操场",
+      "image": "./作品五校园游客导览/07-建筑插画-励教楼丽泽楼风雨操场.png",
+      "alt": "建筑插画-励教楼丽泽楼风雨操场",
+      "tag": "DESIGN",
+      "metric": ""
+    },
+    {
+      "title": "实体路牌方案",
+      "image": "./作品五校园游客导览/08-实体路牌方案.png",
+      "alt": "实体路牌方案",
+      "tag": "DESIGN",
+      "metric": ""
+    }
+  ]
+}
+
+    ];
+
+    WORKS_DATA.push({"id": "chuan-liu-wu-ding", "num": "06", "category": "space", "title": "川流无定", "overviewType": "交互影像", "overviewCategory": "DIGITAL ART", "overviewDate": "2026.09—2026.10", "summary": "从汉字“川”的字形与河流意象出发，以点击触发分流与绕行，让观众在参与中感受边界、流动与人的介入。", "overviewSummary": "从汉字“川”的字形与河流意象出发，以点击触发分流与绕行，让观众在参与中感受边界、流动与人的介入。", "projectIntroduction": ["以汉字“川”为起点的交互影像作品，探索边界、流动与人的介入。"], "timeline": "2026.09 — 2026.10", "tags": ["数字艺术", "动态影像"], "cover": {"image": "./作品六川流无定/总览封面.png", "alt": "川流无定河流视觉作品图"}, "plates": [{"title": "川流无定 · 画面展示", "image": "./作品六川流无定/设计过程/05-作品展示.png", "alt": "川流无定交互影像画面"}, {"title": "川流无定 · 现场展示", "image": "./作品六川流无定/设计过程/06-作品展示.png", "alt": "川流无定大屏现场展示"}]});
+
+    WORKS_DATA.push(...[{"id": "brand-additional-placeholder", "num": "07", "category": "brand", "placeholder": true, "title": "新作品 · 待更新", "overviewType": "品牌与产品", "overviewCategory": "BRAND & PRODUCT", "overviewDate": "", "summary": "", "overviewSummary": "", "cover": {"image": "./assets/digital-art-placeholder.svg", "alt": "品牌与产品新作品占位，待更新"}, "plates": []}, {"id": "service-additional-placeholder", "num": "08", "category": "ux", "placeholder": true, "title": "新作品 · 待更新", "overviewType": "服务设计", "overviewCategory": "SERVICE", "overviewDate": "", "summary": "", "overviewSummary": "", "cover": {"image": "./assets/digital-art-placeholder.svg", "alt": "服务设计新作品占位，待更新"}, "plates": []}, {"id": "digital-additional-placeholder", "num": "09", "category": "space", "placeholder": true, "title": "新作品 · 待更新", "overviewType": "数字艺术", "overviewCategory": "DIGITAL ART", "overviewDate": "", "summary": "", "overviewSummary": "", "cover": {"image": "./assets/digital-art-placeholder.svg", "alt": "数字艺术新作品占位，待更新"}, "plates": []}]);
+
+    WORKS_DATA.filter(work => work.placeholder).forEach(work => { work.tags = [work.overviewType]; });
+
+    let currentWorkIdx = 0;
+    let overviewHoverReady = false;
+    let overviewPointer = null;
+    let overviewEntryPointer = null;
+    document.addEventListener('pointermove', event => {
+      const point = {x:event.clientX, y:event.clientY};
+      overviewPointer = point;
+      if (!document.getElementById('view-works')?.classList.contains('active')) return;
+      if (!overviewHoverReady) {
+        if (!overviewEntryPointer) { overviewEntryPointer = point; return; }
+        if (Math.hypot(point.x-overviewEntryPointer.x, point.y-overviewEntryPointer.y) < 2) return;
+        overviewHoverReady = true;
+      }
+      const card = document.elementFromPoint(point.x,point.y)?.closest('.work-thumb-card');
+      if (card && Number(card.dataset.workIndex) !== currentWorkIdx) selectOverviewWork(Number(card.dataset.workIndex));
+    }, {passive:true});
+    let galleryLightboxImages = [];
+    let activeGalleryLightboxIndex = 0;
+    let currentBackcoverIdx = 0;
+    let visitedWorks = new Set([0]);
+
+    function navigate(viewName, stateCode) {
+      if (viewName === 'contact') { navigate('about'); requestAnimationFrame(() => document.getElementById('aboutContact').scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',block:'center'})); return; }
+      document.body.classList.toggle('home-active', viewName === 'home');
+      document.body.classList.toggle('detail-active', viewName === 'detail');
+      document.querySelectorAll('.page-view').forEach(el => el.classList.remove('active'));
+      const targetEl = document.getElementById(`view-${viewName}`);
+      if (targetEl) targetEl.classList.add('active');
+
+      const backBtn = document.getElementById('backHomeBtn');
+      if (viewName === 'home') {
+        backBtn.classList.add('hidden');
+      } else {
+        backBtn.classList.remove('hidden');
+        backBtn.innerHTML = '<span>←</span> 返回封面';
+        backBtn.onclick = () => navigate('home');
+      }
+
+      document.querySelectorAll('.main-nav .nav-item').forEach(item => {
+        const navTarget = item.getAttribute('data-target');
+        const isWorksFamily = (viewName === 'works' || viewName === 'detail') && navTarget === 'works';
+        const isContactFamily = (viewName === 'contact' || viewName === 'backcover') && navTarget === 'contact';
+        item.classList.toggle('active', navTarget === viewName || isWorksFamily || isContactFamily);
+      });
+
+
+      if (viewName === 'works') {
+        overviewHoverReady = false;
+        overviewEntryPointer = overviewPointer;
+        currentWorkIdx = currentCategoryIndices()[0] ?? 0;
+        renderWorksOverview();
+      } else if (viewName === 'backcover') {
+        renderBackcover();
+      } else if (viewName === 'state') {
+        renderStateScreen(stateCode || 10);
+      }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    let activeFilter = 'all';
+    function workMatchesFilter(work, category) { return category === 'all' ? ['01', '02', '05'].includes(work.num) : work.category === category; }
+    function currentCategoryIndices() { return WORKS_DATA.map((work,index)=>workMatchesFilter(work,activeFilter)?index:-1).filter(index=>index>=0); }
+    function getWorkDisplayNumber(index) { return String(currentCategoryIndices().indexOf(index)+1).padStart(2,'0'); }
+    function filterWorks(cat, btnEl) {
+      activeFilter = cat;
+      document.querySelectorAll('.works-category-tabs .filter-pill').forEach(b => { b.classList.toggle('active', b === btnEl); b.setAttribute('aria-pressed', String(b === btnEl)); });
+      if (btnEl) btnEl.classList.add('active');
+      const firstMatchIdx = WORKS_DATA.findIndex(w => workMatchesFilter(w, cat));
+      if (firstMatchIdx !== -1) currentWorkIdx = firstMatchIdx;
+      renderWorksOverview();
+      const overview = document.getElementById('view-works');
+      overview.classList.remove('category-entering');
+      void overview.offsetWidth;
+      overview.classList.add('category-entering');
+    }
+
+    function renderWorksOverview() {
+      const stack = document.getElementById('worksThumbStack');
+      if (!stack) return;
+      if (!workMatchesFilter(WORKS_DATA[currentWorkIdx], activeFilter)) currentWorkIdx = WORKS_DATA.findIndex(w => workMatchesFilter(w, activeFilter));
+      stack.innerHTML = WORKS_DATA.map((w, idx) => {
+        if (!workMatchesFilter(w, activeFilter)) return '';
+        const displayNum = getWorkDisplayNumber(idx);
+        const dimmed = false;
+        const isActive = idx === currentWorkIdx;
+        return `
+          <div class="work-thumb-card ${isActive ? 'active' : ''}" data-work-index="${idx}"
+               style="${dimmed ? 'opacity:0.38;' : ''}"
+               onmouseenter="if(overviewHoverReady) selectOverviewWork(${idx})"
+               onfocus="selectOverviewWork(${idx})"
+               role="button" tabindex="0"
+               onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); openDetail(${idx}); }"
+               onclick="openDetail(${idx})">
+            <div class="work-thumb-mini">
+              <span class="work-thumb-mini-num">${displayNum}</span>
+              <span class="work-thumb-mini-tag">${w.overviewType}</span>
+            </div>
+            <div class="work-thumb-meta">
+              <div class="wt-idx">PROJECT ${displayNum} · ${w.overviewCategory}</div>
+              <div class="wt-title">${w.title}</div>
+              <div class="wt-tags">${w.overviewType}${w.overviewDate ? ' · ' + w.overviewDate : ''}</div>
+            </div>
+          </div>
+        `;
+      }).join('');
+      stack.style.setProperty('--visible-work-count', stack.children.length);
+      document.querySelectorAll('.works-category-tabs .filter-pill').forEach(button => { const selected = button.getAttribute('onclick').includes("'" + activeFilter + "'"); button.classList.toggle('active', selected); button.setAttribute('aria-pressed', String(selected)); });
+      updateBigshotStage(currentWorkIdx);
+    }
+
+    function selectOverviewWork(idx) {
+      currentWorkIdx = idx;
+      visitedWorks.add(idx);
+      document.querySelectorAll('.work-thumb-card').forEach((card, i) => {
+        card.classList.toggle('active', Number(card.dataset.workIndex) === idx);
+      });
+      updateBigshotStage(idx);
+    }
+
+    function updateBigshotStage(idx) {
+      const w = WORKS_DATA[idx];
+      const videoPlate = w.plates.find(p => p.video);
+      const canvas = document.getElementById('worksBigshotCanvas');
+      const pairedImages = w.id === 'f06' ? [w.cover, w.plates[w.plates.length - 1]] : null;
+      canvas.classList.toggle('bigshot-visual-canvas--pair', Boolean(pairedImages));
+      canvas.innerHTML = pairedImages
+        ? pairedImages.map(p => `<img src="${p.image}" alt="${p.alt}" decoding="async">`).join('')
+        : videoPlate
+        ? `<video autoplay muted loop playsinline preload="metadata" poster="${videoPlate.poster}" aria-label="${videoPlate.title}"><source src="${videoPlate.video}" type="video/mp4"></video>`
+        : `<img src="${w.cover.image}" alt="${w.cover.alt}" decoding="async">`;
+      document.getElementById('worksBigshotTitle').textContent = w.title;
+      document.getElementById('worksBigshotSummary').textContent = w.overviewSummary || w.summary;
+      const detailButton = document.querySelector('#view-works button[onclick="openDetail(currentWorkIdx)"]');
+      detailButton.disabled = Boolean(w.placeholder);
+      detailButton.textContent = w.placeholder ? '作品待更新' : '打开完整详情 →';
+      detailButton.style.cursor = w.placeholder ? 'default' : '';
+
+    }
+
+    let galleryResultsMarkup = '';
+    function switchDetailGallery(mode) {
+      const pane = document.getElementById('detailPhotoStream');
+      pane.dataset.galleryMode = mode;
+      document.querySelectorAll('#detailGalleryTabs button').forEach(button => {
+        const active = button.dataset.mode === mode;
+        button.classList.toggle('active', active);
+        button.setAttribute('aria-pressed', String(active));
+      });
+      if (mode === 'results') { pane.innerHTML = galleryResultsMarkup; pane.classList.toggle('photo-stream-pane--video', WORKS_DATA[currentWorkIdx].plates.length===1 && Boolean(WORKS_DATA[currentWorkIdx].plates[0].video)); }
+      else if (WORKS_DATA[currentWorkIdx].id === 'chuan-liu-wu-ding') {
+        const folder='./作品六川流无定/设计过程/';
+        const groups=[
+          ['玩法与方向调整',['01-算法与玩法反思.png','02-交互方向调整.png']],
+          ['河流视觉迭代',['03-河流视觉与流动优化.png','04-最终视觉调整.png']]
+        ];
+        pane.innerHTML=groups.map(([title,files])=>`<section class="own-process-group"><h3>${title}</h3>${files.map(file=>`<article class="process-plate process-plate--image design-process-stage"><img class="plate-image" src="${folder}${file}" alt="${title}" loading="eager"></article>`).join('')}</section>`).join('');
+        pane.classList.remove('photo-stream-pane--video');
+      } else {
+        const isOwnProject = currentWorkIdx === 0;
+        const folder = isOwnProject ? './作品一own%20your%20shit/设计过程/' : './作品二学院猫敦煌季/设计过程/';
+        const stages = isOwnProject ? [
+          ['01-线上访谈.jpg','01 / 线上访谈','通过线上访谈了解护理与外出中的实际需求，为团队方案提供研究依据。'],
+          ['02-视觉符号.jpg','02 / 视觉符号','围绕造口主题建立视觉符号，连接项目议题与宣传表达。'],
+          ['03-吉祥物.jpg','03 / 吉祥物设计','将主题转化为亲和的角色形象，应用于项目视觉传播。'],
+          ['04-外出佩戴.jpg','04 / 外出佩戴展示','以外出场景呈现护理包原型的佩戴方式与整体比例。'],
+          ['05-日常场景.jpg','05 / 日常场景展示','在日常交流场景中展示护理包原型，呈现产品与生活场景的联系。'],
+          ['06-护理包展示.jpg','06 / 原型呈现','通过佩戴照片展示护理包的造型、配色与视觉细节。']
+        ] : [
+          ['01-方巾构图线稿.jpg','01 / 构图线稿','以三只猫咪、飘带与边框纹样组织方巾画面。'],
+          ['02-角色草稿与细化.jpg','02 / 角色细化','对照草稿与彩色绘制，呈现角色姿态、表情及装饰细节。'],
+          ['03-沙漠叙事图案.jpg','03 / 彩色图案','将三只小猫融入沙漠旅行场景，形成眼镜布的叙事画面。'],
+          ['04-眼镜布实物呈现.jpg','04 / 实物呈现','展示两款图案在眼镜布上的材质与印制效果。']
+        ];
+        if (isOwnProject) {
+          const groups = [
+            {title:'线上访谈', images:stages.slice(0,1)},
+            {title:'视觉符号设计', images:stages.slice(1,3)},
+            {title:'护理包佩戴展示', images:stages.slice(3,6)}
+          ];
+          pane.innerHTML = groups.map(group => `<section class="own-process-group"><h3>${group.title}</h3>${group.images.map(([file]) => `<article class="process-plate process-plate--image design-process-stage"><img class="plate-image" src="${folder}${file}" alt="${group.title}" loading="eager"></article>`).join('')}</section>`).join('');
+        } else {
+          const groups = [
+            {title:'设计稿修改', images:stages.slice(0,3)},
+            {title:'实物打样', images:stages.slice(3,4)}
+          ];
+          pane.innerHTML = groups.map(group => `<section class="own-process-group"><h3>${group.title}</h3>${group.images.map(([file]) => `<article class="process-plate process-plate--image design-process-stage"><img class="plate-image" src="${folder}${file}" alt="${group.title}" loading="eager"></article>`).join('')}</section>`).join('');
+        }
+      }
+      pane.scrollTop = 0;
+    }
+
+    function openDetail(idx) {
+      if (WORKS_DATA[idx]?.placeholder) return;
+      currentWorkIdx = idx;
+      visitedWorks.add(idx);
+      const w = WORKS_DATA[idx];
+      if (!workMatchesFilter(w, activeFilter)) activeFilter = w.category;
+      const displayNum = getWorkDisplayNumber(idx);
+      navigate('detail');
+      const detailPage = document.getElementById('view-detail');
+      detailPage.classList.remove('detail-entering');
+      void detailPage.offsetWidth;
+      detailPage.classList.add('detail-entering');
+      document.getElementById('detailCrumbTitle').textContent = `${displayNum} · ${w.title}`;
+
+      const stream = document.getElementById('detailPhotoStream');
+      stream.classList.toggle('photo-stream-pane--video', w.plates.length === 1 && Boolean(w.plates[0].video));
+      stream.innerHTML = w.plates.map((p, pIdx) => p.video
+        ? `<article class="process-plate process-plate--image">
+             <video class="plate-image" ${w.id === 'chuan-liu-wu-ding' ? 'controls' : ''} autoplay muted playsinline preload="metadata" poster="${p.poster}" aria-label="${p.title}">
+               <source src="${p.video}" type="video/mp4">
+               当前浏览器不支持视频播放，请<a href="${p.video}">下载视频</a>观看。
+             </video>
+           </article>`
+        : p.image
+        ? `<article class="process-plate process-plate--image">
+             <img class="plate-image" src="${p.image}" alt="${p.alt}" loading="eager" decoding="async">
+           </article>`
+        : `<article class="process-plate">
+             <div class="plate-visual">${pIdx === 0 ? w.heroSvg() : generateProcessDiagramSvg(idx, pIdx, p)}</div>
+             <div class="plate-caption">
+               <div>
+                 <strong>${p.title}</strong>
+                 <div style="margin-top:2px;"><span>${p.sub}</span></div>
+               </div>
+               <span style="color:var(--orange-primary); background:var(--orange-soft); padding:3px 10px; border-radius:999px; font-family:var(--font-mono); font-size:11px;">${p.metric}</span>
+             </div>
+           </article>           `).join('');
+           galleryResultsMarkup = stream.innerHTML;
+           stream.dataset.galleryMode = 'results';
+           document.getElementById('detailGalleryTabs').hidden = ![0,1,5].includes(idx);
+           document.querySelector('.detail-left-gallery').classList.toggle('has-gallery-tabs', [0,1,5].includes(idx));
+           document.querySelectorAll('#detailGalleryTabs button').forEach(button => { const selected = button.dataset.mode === 'results'; button.classList.toggle('active', selected); button.setAttribute('aria-pressed', String(selected)); });
+           stream.scrollTop = 0;
+
+           const dossier = document.getElementById('detailRightDossier');
+      dossier.innerHTML = `
+        <div class="detail-editorial-meta"><b>PROJECT ${displayNum}</b><span>${w.overviewType}</span></div>
+        <h2 class="detail-editorial-title">${w.title}</h2>
+        <h3 class="detail-editorial-subtitle">项目介绍</h3>
+        <div class="detail-original-paragraphs">${(w.projectIntroduction || [w.summary]).map(paragraph => `<p>${paragraph}</p>`).join('')}</div>
+        <div class="detail-editorial-time"><span>时间与周期</span><strong>${w.overviewDate || w.timeline}</strong></div>
+      `;
+
+      dossier.classList.toggle('project-one-intro', idx >= 0 && idx <= 4);
+      if (idx === 0) dossier.innerHTML = `
+        <div class="detail-editorial-meta"><b>PROJECT ${displayNum}</b><span>服务设计 / 新加坡</span></div>
+        <h2 class="detail-editorial-title">own your sh*t</h2>
+        <div class="project-intro-lead personal-role-card"><span class="personal-role-label">我的职责</span><p>参与前期线上线下调研，负责吉祥物与对比宣传海报设计，协助护理包制作、最终布展与汇报。</p></div>
+        <div class="project-intro-block"><h3><i>01</i> 项目背景</h3><p>面向造口患者出院后的前 30 天，团队以便携护理包、渐进式城市打卡与护理优惠，支持患者重拾外出信心。</p></div>
+        <div class="project-intro-block"><h3><i>02</i> 设计思路与成果</h3><div class="project-intro-solution"><b>用户调研</b><p>通过线上线下访谈，了解护理成本、术后适应与外出顾虑，为团队寻找设计切入点提供依据。</p></div><div class="project-intro-solution"><b>视觉表达</b><p>设计吉祥物与对比宣传海报，用直观、亲和的视觉表达传递项目理念，帮助公众认识造口患者的处境。</p></div><div class="project-intro-solution"><b>协作与呈现</b><p>协助护理包制作，将视觉成果带入最终展陈，并参与项目汇报，呈现团队的服务方案与设计过程。</p></div></div>
+        <div class="detail-editorial-time"><span>时间与周期</span><strong>2025.08 — 2025.12 · 四个月</strong></div>`;
+
+      if (idx === 1) dossier.innerHTML = `
+        <div class="detail-editorial-meta"><b>PROJECT ${displayNum}</b><span>文创设计 / 校园 IP × 敦煌文化</span></div>
+        <h2 class="detail-editorial-title">学院猫敦煌季</h2>
+        <div class="project-intro-lead personal-role-card"><span class="personal-role-label">我的职责</span><p>负责眼镜布与丝巾图案设计，对接生产厂家并推进多轮实物打样。</p></div>
+        <div class="project-intro-block"><h3><i>01</i> 项目背景</h3><p>将校园猫咪 IP 与敦煌文化结合，开发眼镜布与丝巾等日常文创，相关 IP 盈利用于校园流浪猫救助。</p></div>
+        <div class="project-intro-block"><h3><i>02</i> 设计思路与成果</h3><div class="project-intro-solution"><b>叙事与图案</b><p>眼镜布以“三只小猫出游敦煌”讲故事；丝巾结合敦煌藻井与“三兔共耳”，采用环绕式构图。</p></div><div class="project-intro-solution"><b>产品适配</b><p>根据两类产品的使用场景调整图案组织，并以鲜明的敦煌配色建立统一的系列视觉。</p></div><div class="project-intro-solution"><b>打样与落地</b><p>通过厂家沟通与多轮实物打样，检验图案在实际材质上的呈现效果，推进平面图案向实体产品转化。</p></div></div>
+        <div class="detail-editorial-time"><span>时间与周期</span><strong>2026.03 — 2026.06</strong></div>`;
+
+      if (idx === 2) dossier.innerHTML = `
+        <div class="detail-editorial-meta"><b>PROJECT ${displayNum}</b><span>品牌与文创 / 校园公益</span></div>
+        <h2 class="detail-editorial-title">山谷猫咪之家</h2>
+        <div class="project-intro-lead personal-role-card"><span class="personal-role-label">我的职责</span><p>负责两款 Logo、文创包装卡头与卡背，以及 13 只校园猫咪的晴雨伞图案设计。</p></div>
+        <div class="project-intro-block"><h3><i>01</i> 项目背景</h3><p>为北师大珠海校区流浪猫公益组织设计品牌与文创，支持校园救助宣传，相关经营盈利用于猫咪救助。</p></div>
+        <div class="project-intro-block"><h3><i>02</i> 设计思路与成果</h3><div class="project-intro-solution"><b>品牌识别</b><p>将猫咪、山谷与爱心元素融入两款 Logo，适配不同传播场景，建立亲和的公益形象。</p></div><div class="project-intro-solution"><b>信息与包装</b><p>把组织联系方式与二维码融入包装卡头、卡背，让产品包装同时承担品牌展示与公益信息传达。</p></div><div class="project-intro-solution"><b>产品延展</b><p>结合广东多雨、日晒强的需求，将 13 只校园猫咪转化为 Q 版群像，围绕伞面构图，让日常用品成为公益传播载体。</p></div></div>
+        <div class="detail-editorial-time"><span>时间与周期</span><strong>2024.09 — 2025.03</strong></div>`;
+
+      if (idx === 3) dossier.innerHTML = `
+        <div class="detail-editorial-meta"><b>PROJECT ${displayNum}</b><span>动态影像 / TouchDesigner</span></div>
+        <h2 class="detail-editorial-title">川</h2>
+        <div class="project-intro-lead personal-role-card"><span class="personal-role-label">我的职责</span><p>运用 TouchDesigner 制作粒子影像，围绕字形、运动节奏与色彩进行视觉探索。</p></div>
+        <div class="project-intro-block"><h3><i>01</i> 项目背景</h3><p>以汉字“川”的线性结构与水流意象为起点，探索静态文字向动态粒子影像的转化。</p></div>
+        <div class="project-intro-block"><h3><i>02</i> 设计思路与成果</h3><div class="project-intro-solution"><b>形态转化</b><p>提取“川”的线条结构，通过粒子的聚散、延展与流动重组字形，连接文字与抽象影像。</p></div><div class="project-intro-solution"><b>动态与色彩</b><p>调整粒子运动节奏，结合蓝紫色调与细密层次，形成连续、柔和的流动效果。</p></div></div>
+        <div class="detail-editorial-time"><span>时间与周期</span><strong>2026.10</strong></div>`;
+
+      if (w.id === 'campus-guide') dossier.innerHTML = `
+        <div class="detail-editorial-meta"><b>PROJECT ${displayNum}</b><span>服务设计 / 校园导览</span></div>
+        <h2 class="detail-editorial-title">BNUZH 游客导览系统</h2>
+        <div class="project-intro-lead personal-role-card"><span class="personal-role-label">我的职责</span><p>负责前期调研、公共服务图标与路边指示牌设计，提升导览信息的清晰度与辨识度。</p></div>
+        <div class="project-intro-block"><h3><i>01</i> 项目背景</h3><p>面向初次到访北师大珠海校区的游客，团队整合地图、移动端与实体路牌，回应路牌指引不足、地图信息繁杂等寻路问题。</p></div>
+        <div class="project-intro-block"><h3><i>02</i> 设计思路与成果</h3><div class="project-intro-solution"><b>调研与问题识别</b><p>参与前期调研，了解游客寻路需求与现有导览问题，为图标和指示牌设计明确方向。</p></div><div class="project-intro-solution"><b>导览图标</b><p>将餐饮、交通、医疗等公共服务转化为分类图标，通过清晰轮廓与色彩区分信息，便于游客快速识别。</p></div><div class="project-intro-solution"><b>实体指示牌</b><p>设计路边指示牌方案，将方向指引与二维码入口结合，沿用导览系统的视觉语言，衔接线下寻路与线上地图。</p></div></div>
+        <div class="detail-editorial-time"><span>时间与周期</span><strong>2026.05 — 2026.06</strong></div>`;
+
+      if (w.id === 'chuan-liu-wu-ding') {
+        dossier.classList.add('project-one-intro');
+        dossier.innerHTML = `
+          <div class="detail-editorial-meta"><b>PROJECT ${displayNum}</b><span>数字艺术 / 交互影像</span></div>
+          <h2 class="detail-editorial-title">川流无定</h2>
+          <a class="chuan-live-link" href="https://a.yexierxiangxing.click/" target="_blank" rel="noopener noreferrer">体验交互作品 ↗</a>
+          <div class="project-intro-lead personal-role-card"><span class="personal-role-label">我的职责</span><p>前期负责河流算法与玩法推敲，后期重点调整主画面河流视觉、分流轨迹与流动平滑度。</p></div>
+          <div class="project-intro-block"><h3><i>01</i> 项目背景</h3><p>三人团队以汉字<strong>“川”的字形与河流意象</strong>为起点，探索边界、流动与人的介入。观众通过点击改变局部流路，观看河流绕行、分流与汇合，在参与中理解行动与整体变化的关系。</p></div>
+          <div class="project-intro-block"><h3><i>02</i> 设计思路与成果</h3>
+          <div class="project-intro-solution"><b>玩法反思</b><p>梳理对向河流碰撞、分流动力和流量分配等问题，发现“吞并获胜”的机制与主题不符。团队尝试合作方案后，最终取消胜负目标，转向沉浸式交互体验。</p></div>
+          <div class="project-intro-solution"><b>河流视觉</b><p>将独立点状粒子调整为连续线条，结合双河、明度与颜色渐变反复修改，优化分流后的轨迹，减少僵硬和卡顿。</p></div>
+          <div class="project-intro-solution"><b>交互呈现</b><p>团队完成点击分流与绕行的交互影像，并进行大屏展示与影像记录。大屏分流平滑度和首次操作提示仍有进一步完善空间。</p></div></div>
+          <div class="detail-editorial-time"><span>时间与周期</span><strong>2026.09 — 2026.10</strong></div>`;
+      }
+
+      const prevBtn = document.getElementById('detailPrevBtn');
+      const nextBtn = document.getElementById('detailNextBtn');
+      const sequence = currentCategoryIndices().filter(index => !WORKS_DATA[index].placeholder);
+      const position = sequence.indexOf(idx);
+      document.getElementById('detailContactBtn').style.visibility = position === sequence.length - 1 ? 'visible' : 'hidden';
+      if(position > 0) {
+        prevBtn.style.visibility = 'visible';
+        prevBtn.textContent = `← 上一个：${WORKS_DATA[sequence[position-1]].title}`;
+        prevBtn.onclick = () => openDetail(sequence[position-1]);
+      } else { prevBtn.style.visibility = 'hidden'; prevBtn.onclick = null; }
+      if(position < sequence.length-1) {
+        nextBtn.textContent = `下一个：${WORKS_DATA[sequence[position+1]].title} →`;
+        nextBtn.onclick = () => openDetail(sequence[position+1]);
+      } else {
+        const categories = ['brand', 'ux', 'space'];
+        const labels = {brand:'品牌与产品', ux:'服务设计', space:'数字艺术'};
+        const currentCategory = categories.indexOf(activeFilter);
+        const nextCategory = categories[(currentCategory + 1) % categories.length];
+        nextBtn.textContent = `下一类：${labels[nextCategory]} →`;
+        nextBtn.onclick = () => {
+          activeFilter = nextCategory;
+          const first = WORKS_DATA.findIndex(work => work.category === nextCategory && !work.placeholder);
+          if (first >= 0) openDetail(first);
+        };
+      }
+    }
+
+    function prevDetailWork() {
+      const sequence=currentCategoryIndices(),position=sequence.indexOf(currentWorkIdx);
+      if(position>0)openDetail(sequence[position-1]);
+    }
+    function nextDetailWork() {
+      const sequence=currentCategoryIndices(),position=sequence.indexOf(currentWorkIdx);
+      if(position<sequence.length-1)openDetail(sequence[position+1]);else navigate('contact');
+    }
+
+    function generateProcessDiagramSvg(workIdx, plateIdx, plateObj) {
+      const colors = ['#FF6B35', '#2D6A4F', '#2B4C7E', '#8C5E3C'];
+      const themeColor = colors[workIdx % colors.length];
+      return `
+        <svg width="100%" height="250" viewBox="0 0 720 250" fill="none">
+          <rect width="720" height="250" rx="16" fill="#FFFFFF"/>
+          <text x="36" y="42" font-family="monospace" font-size="11" fill="#8C8984" letter-spacing="1.5">PROCESS PLATE 0${plateIdx + 1} · ${plateObj.tag}</text>
+          <line x1="36" y1="56" x2="684" y2="56" stroke="#F0EFEA" stroke-width="1.5"/>
+          ${plateIdx % 2 === 1 ? `
+            <rect x="44" y="82" width="185" height="128" rx="12" fill="#FAF9F6"/>
+            <circle cx="96" cy="130" r="24" fill="${themeColor}" fill-opacity="0.15"/>
+            <circle cx="96" cy="130" r="8" fill="${themeColor}"/>
+            <text x="44" y="228" font-size="11" fill="#8C8984">阶段观察样本 A</text>
+
+            <rect x="266" y="82" width="185" height="128" rx="12" fill="#FAF9F6"/>
+            <path d="M290 175 L330 130 L370 152 L420 105" stroke="${themeColor}" stroke-width="2.5" stroke-linecap="round"/>
+            <text x="266" y="228" font-size="11" fill="#8C8984">关键痛点与情绪曲线</text>
+
+            <rect x="488" y="82" width="188" height="128" rx="12" fill="#141413"/>
+            <text x="582" y="142" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="18">${plateObj.metric}</text>
+            <text x="582" y="168" text-anchor="middle" fill="#C8C5BE" font-size="11">核心推演结论</text>
+          ` : `
+            <g transform="translate(44, 78)">
+              <rect width="290" height="140" rx="14" fill="#FAF9F6" stroke="#141413" stroke-width="1.4"/>
+              <line x1="0" y1="46" x2="290" y2="46" stroke="#EBE9E2"/>
+              <circle cx="24" cy="23" r="5" fill="${themeColor}"/>
+              <rect x="24" y="68" width="140" height="14" rx="4" fill="#141413"/>
+              <rect x="24" y="94" width="210" height="10" rx="4" fill="#C8C5BE"/>
+              <rect x="24" y="112" width="170" height="10" rx="4" fill="#EBE9E2"/>
+            </g>
+            <g transform="translate(364, 78)">
+              <rect width="312" height="140" rx="14" fill="#FAF9F6"/>
+              <circle cx="72" cy="70" r="38" fill="${themeColor}"/>
+              <circle cx="132" cy="70" r="38" fill="#141413" fill-opacity="0.85"/>
+              <text x="200" y="65" font-family="monospace" font-size="12" fill="#141413">${plateObj.tag}</text>
+              <text x="200" y="86" font-size="12" fill="#4A4845">${plateObj.metric}</text>
+            </g>
+          `}
+        </svg>
+      `;
+    }
+
+    function renderBackcover() {
+      const rail = document.getElementById('backcoverRail');
+      if (!rail) return;
+
+      const hintEl = document.getElementById('backcoverDynamicHint');
+      if (visitedWorks.size >= 4) {
+        hintEl.innerHTML = `🎉 你已经完整翻阅了全部 <strong>4 组作品</strong>！如果觉得气味相投，欢迎随时 <a onclick="navigate('contact')" style="color:var(--orange-primary); text-decoration:underline; cursor:pointer;">[回到联系方式约面]</a>。`;
+      }
+
+      rail.innerHTML = WORKS_DATA.map((w, idx) => `
+        <div class="cover-rail-item ${idx === currentBackcoverIdx ? 'active' : ''}"
+             onmouseenter="selectBackcoverWork(${idx})"
+             onclick="openDetail(${idx})">
+          <div class="rail-thumb">${w.num}</div>
+          <div>
+            <div style="font-weight:600; font-size:14px;">${w.title} ${idx === 0 ? '· 主推' : ''}</div>
+            <div class="rail-sub" style="font-size:12px; color:var(--ink-muted);">${w.tags.join(' · ')}</div>
+          </div>
+          <span style="font-size:13px;">→</span>
+        </div>
+      `).join('');
+
+      selectBackcoverWork(currentBackcoverIdx);
+    }
+
+    function selectBackcoverWork(idx) {
+      currentBackcoverIdx = idx;
+      const w = WORKS_DATA[idx];
+      document.getElementById('backcoverArtBox').innerHTML = w.heroSvg();
+      document.getElementById('backcoverBadge').textContent = `作品 ${w.num} ${idx === 0 ? '· 主推案例' : '· 精选案卷'}`;
+      document.getElementById('backcoverTitle').textContent = w.title;
+      document.getElementById('backcoverDesc').textContent = `${w.shortThesis} · ${w.metrics}`;
+      document.querySelectorAll('.cover-rail-item').forEach((el, i) => {
+        el.classList.toggle('active', i === idx);
+      });
+    }
+
+    function renderStateScreen(code) {
+      [10, 11, 12].forEach(c => {
+        const tab = document.getElementById(`stateTab${c}`);
+        if (tab) tab.classList.toggle('active', c === code);
+      });
+
+      const artBox = document.getElementById('stateArtContainer');
+      const headline = document.getElementById('stateHeadline');
+      const subline = document.getElementById('stateSubline');
+
+      if (code === 10) {
+        headline.textContent = '加载有点慢 ⏱';
+        subline.textContent = '页面需要在 15 秒内完成高清图拉取；超时后会自动帮你切回总览，绝不浪费 HR 的时间。';
+        artBox.innerHTML = `
+          <svg width="260" height="160" viewBox="0 0 260 160" fill="none">
+            <circle cx="130" cy="80" r="46" stroke="#EBE9E2" stroke-width="4"/>
+            <path d="M130 34 A46 46 0 0 1 176 80" stroke="#FF6B35" stroke-width="4" stroke-linecap="round"/>
+            <text x="130" y="85" text-anchor="middle" font-family="monospace" font-size="16" fill="#141413">12s</text>
+          </svg>
+        `;
+      } else if (code === 11) {
+        headline.textContent = '其中一张图打不开 😢';
+        subline.textContent = '其他过程图和纯文字版复盘均正常显示，你可以直接跳过这张图继续阅读核心结论。';
+        artBox.innerHTML = `
+          <svg width="260" height="160" viewBox="0 0 260 160" fill="none">
+            <rect x="65" y="28" width="130" height="104" rx="14" fill="#FAF9F6" stroke="#141413" stroke-width="1.8" stroke-dasharray="5 5"/>
+            <text x="130" y="78" text-anchor="middle" font-size="13" fill="#141413">图片已启用文字回退</text>
+            <text x="130" y="100" text-anchor="middle" font-family="monospace" font-size="11" fill="#FF6B35">FALLBACK ACTIVE</text>
+          </svg>
+        `;
+      } else {
+        headline.textContent = '加载超时了，我们先停手';
+        subline.textContent = '可能是当前网络波动。我们已经停止无休止转圈，你可以一键回到作品总览或稍后重试。';
+        artBox.innerHTML = `
+          <svg width="260" height="160" viewBox="0 0 260 160" fill="none">
+            <circle cx="130" cy="80" r="44" fill="#FAF9F6" stroke="#141413" stroke-width="1.8"/>
+            <line x1="114" y1="64" x2="146" y2="96" stroke="#FF6B35" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="146" y1="64" x2="114" y2="96" stroke="#FF6B35" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        `;
+      }
+    }
+
+    function copyText(text, msg) {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).catch(() => {});
+      }
+      showToast(msg || '已复制');
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById('toastMsg');
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 2400);
+    }
+
+    function openResumeModal() {
+      document.getElementById('resumeModal').classList.add('open');
+    }
+
+    function closeResumeModal() {
+      document.getElementById('resumeModal').classList.remove('open');
+    }
+
+    
+    // Gut Feeling Agency 风格交互：拼图拖拽与整理
+    let draggedEl = null;
+    let startX = 0, startY = 0, initialLeft = 0, initialTop = 0;
+    const originalPositions = new Map();
+    const floatingPieceOrigins = new Map();
+    let activeFloatingDrag = null;
+
+    function initGutFeelingDraggables() {
+      const draggables = document.querySelectorAll('.puzzle-orange-piece');
+      draggables.forEach(el => {
+        originalPositions.set(el, {
+          transform: el.style.transform || '',
+          left: el.style.left || '',
+          top: el.style.top || ''
+        });
+
+        el.addEventListener('mousedown', (e) => {
+          if (e.button !== 0) return;
+          if (isFloatingZooming) return;
+          
+          draggedEl = el;
+          startX = e.clientX;
+          startY = e.clientY;
+          
+          const curRect = el.getBoundingClientRect();
+          const parentRect = el.parentElement.getBoundingClientRect();
+          initialLeft = curRect.left - parentRect.left;
+          initialTop = curRect.top - parentRect.top;
+          
+          el.style.transition = 'none';
+          el.style.zIndex = '60';
+          el.style.filter = 'drop-shadow(0 24px 44px rgba(255,107,53,0.32)) drop-shadow(0 8px 18px rgba(0,0,0,0.16))';
+          
+          document.addEventListener('mousemove', onMouseMove);
+          document.addEventListener('mouseup', onMouseUp);
+          e.preventDefault();
+        });
+      });
+    }
+
+    let homePiecesScattered = false;
+
+    function scatterHomePieces() {
+      if (homePiecesScattered) return;
+      const home = document.getElementById('view-home');
+      if (!home.classList.contains('active') || activeFloatingDrag) return;
+      const bounds = home.getBoundingClientRect();
+      if (!bounds.width || !bounds.height) return;
+      const text = Array.from(home.querySelectorAll('.sketch-portfolio-title, .home-design-directions, .sketch-hero-greeting, .home-personal-statement, .sketch-hero-instruction')).map(el => {
+        const parent = el.offsetParent.getBoundingClientRect();
+        const current = el.getBoundingClientRect();
+        const left = parent.left + el.offsetLeft;
+        const top = parent.top + el.offsetTop;
+        return {left: Math.min(left, current.left), top: Math.min(top, current.top), right: Math.max(left + el.scrollWidth, current.right), bottom: Math.max(top + el.offsetHeight + 54, current.bottom)};
+      });
+      const pieces = Array.from(home.querySelectorAll('.floating-piece-wrapper'));
+      const overlaps = (a, b, gap = 20) => a.left < b.right + gap && a.right > b.left - gap && a.top < b.bottom + gap && a.bottom > b.top - gap;
+      const positions = [];
+      // Plan every position before writing styles. Retry complete layouts so no
+      // deterministic fallback can place a piece across the introduction.
+      for (let layout = 0; layout < 50; layout++) {
+        positions.length = 0;
+        for (const piece of pieces) {
+          const width = piece.offsetWidth, height = piece.offsetHeight;
+          let candidate = null;
+          for (let attempt = 0; attempt < 600; attempt++) {
+            const minLeft = bounds.width > 700 ? bounds.width * .43 : 16;
+            const left = minLeft + Math.random() * Math.max(0, bounds.width - width - minLeft - 16);
+            const minTop = bounds.height * (bounds.width > 700 ? .43 : .57);
+            const top = minTop + Math.random() * Math.max(0, bounds.height - height - minTop - 16);
+            const rect = {left: bounds.left + left, top: bounds.top + top, right: bounds.left + left + width, bottom: bounds.top + top + height};
+            if (text.some(t => overlaps(rect, t, 28)) || positions.some(p => overlaps(rect, p.rect, 6))) continue;
+            candidate = {piece, left, top, rect};
+            break;
+          }
+          if (!candidate) break;
+          positions.push(candidate);
+        }
+        if (positions.length === pieces.length) break;
+      }
+      if (positions.length !== pieces.length) return;
+      homePiecesScattered = true;
+      for (const {piece, left, top} of positions) {
+        piece.style.transition = 'none';
+        piece.classList.remove('is-placed', 'is-dragging');
+        piece.style.setProperty('--drag-x', '0px');
+        piece.style.setProperty('--drag-y', '0px');
+        piece.style.removeProperty('--piece-tilt');
+        piece.style.left = left / bounds.width * 100 + '%';
+        piece.style.top = top / bounds.height * 100 + '%';
+        floatingPieceOrigins.set(piece, {left: left / bounds.width * 100, top: top / bounds.height * 100});
+      }
+      home.querySelectorAll('.is-matching').forEach(el => el.classList.remove('is-matching'));
+      document.getElementById('tidyUpBtn')?.classList.add('hidden');
+    }
+
+    function initFloatingPiecePuzzle() {
+      const home = document.getElementById('view-home');
+      if (!home) return;
+
+      const configs = {
+        'floating-piece--works': { slot: 'boardSlot_works', view: 'works', color: '橙色', name: '作品总览' },
+        'floating-piece--about': { slot: 'boardSlot_about', view: 'about', color: '蓝色', name: '个人介绍' },
+        'floating-piece--contact': { slot: 'boardSlot_contact', view: 'contact', color: '粉色', name: '联系方式' }
+      };
+      const seenPieces = new Set();
+      const pieces = Array.from(document.querySelectorAll('.floating-piece-wrapper')).filter(piece => {
+        const className = Object.keys(configs).find(name => piece.classList.contains(name));
+        if (!className || seenPieces.has(className)) {
+          piece.remove();
+          return false;
+        }
+        seenPieces.add(className);
+        piece.removeAttribute('onclick');
+        return true;
+      });
+
+      pieces.forEach(piece => {
+        const className = Object.keys(configs).find(name => piece.classList.contains(name));
+        const config = configs[className];
+        piece.dataset.targetSlot = config.slot;
+        piece.dataset.targetView = config.view;
+
+        piece.addEventListener('pointerdown', event => {
+          if (event.button !== 0 || isFloatingZooming || piece.classList.contains('is-placed')) return;
+          const homeRect = home.getBoundingClientRect();
+          event.preventDefault();
+          piece.style.transition = 'none';
+          piece.classList.add('is-dragging');
+          piece.style.setProperty('--piece-tilt', '0deg');
+          document.body.classList.add('puzzle-grabbing');
+          const startRect = piece.getBoundingClientRect();
+          const startShapeRect = piece.querySelector('svg path').getBoundingClientRect();
+          const slot = document.getElementById(config.slot);
+          activeFloatingDrag = {
+            piece,
+            pointerId: event.pointerId,
+            startX: event.clientX,
+            startY: event.clientY,
+            startLeft: startRect.left - homeRect.left,
+            startTop: startRect.top - homeRect.top,
+            startRect,
+            startShapeRect,
+            homeRect,
+            slotRect: slot.querySelector('path').getBoundingClientRect(),
+            pendingX: 0,
+            pendingY: 0,
+            deltaX: 0,
+            deltaY: 0,
+            frameId: null,
+            home,
+            config,
+            moved: false
+          };
+          piece.setPointerCapture(event.pointerId);
+          document.addEventListener('pointermove', onFloatingPiecePointerMove);
+          document.addEventListener('pointerup', onFloatingPiecePointerUp);
+          document.addEventListener('pointercancel', onFloatingPiecePointerUp);
+        });
+
+        piece.addEventListener('keydown', event => {
+          if (event.key !== 'Enter' && event.key !== ' ') return;
+          event.preventDefault();
+          enterPuzzlePage(piece, config);
+        });
+
+        piece.addEventListener('click', () => {
+          if (piece.dataset.justDragged) {
+            delete piece.dataset.justDragged;
+            return;
+          }
+          enterPuzzlePage(piece, config);
+        });
+      });
+    }
+
+    function onFloatingPiecePointerMove(event) {
+      const drag = activeFloatingDrag;
+      if (!drag || event.pointerId !== drag.pointerId) return;
+
+      drag.pendingX = event.clientX - drag.startX;
+      drag.pendingY = event.clientY - drag.startY;
+      if (Math.hypot(drag.pendingX, drag.pendingY) > 1) drag.moved = true;
+      if (!drag.moved) return;
+
+      updateFloatingPieceDrag(drag);
+    }
+
+    function updateFloatingPieceDrag(drag) {
+      const maxLeft = Math.max(0, drag.homeRect.width - drag.startRect.width);
+      const maxTop = Math.max(0, drag.homeRect.height - drag.startRect.height);
+      const left = Math.max(0, Math.min(maxLeft, drag.startLeft + drag.pendingX));
+      const top = Math.max(0, Math.min(maxTop, drag.startTop + drag.pendingY));
+      drag.deltaX = left - drag.startLeft;
+      drag.deltaY = top - drag.startTop;
+      drag.piece.style.setProperty('--drag-x', `${drag.deltaX}px`);
+      drag.piece.style.setProperty('--drag-y', `${drag.deltaY}px`);
+
+      const tidyBtn = document.getElementById('tidyUpBtn');
+      if (tidyBtn) tidyBtn.classList.remove('hidden');
+
+      const distance = Math.hypot(
+        drag.startShapeRect.left + drag.deltaX + drag.startShapeRect.width / 2 - (drag.slotRect.left + drag.slotRect.width / 2),
+        drag.startShapeRect.top + drag.deltaY + drag.startShapeRect.height / 2 - (drag.slotRect.top + drag.slotRect.height / 2)
+      );
+      const threshold = Math.min(drag.slotRect.width, drag.slotRect.height) * 0.24;
+      document.getElementById(drag.config.slot).classList.toggle('is-matching', distance <= threshold);
+    }
+
+    function onFloatingPiecePointerUp(event) {
+      const drag = activeFloatingDrag;
+      if (!drag || event.pointerId !== drag.pointerId) return;
+      if (drag.frameId !== null) {
+        cancelAnimationFrame(drag.frameId);
+        drag.frameId = null;
+      }
+      if (drag.moved) updateFloatingPieceDrag(drag);
+      activeFloatingDrag = null;
+      document.body.classList.remove('puzzle-grabbing');
+      document.removeEventListener('pointermove', onFloatingPiecePointerMove);
+      document.removeEventListener('pointerup', onFloatingPiecePointerUp);
+      document.removeEventListener('pointercancel', onFloatingPiecePointerUp);
+      drag.piece.classList.remove('is-dragging');
+      if (drag.moved) {
+        drag.piece.dataset.justDragged = 'true';
+        setTimeout(() => delete drag.piece.dataset.justDragged, 0);
+      }
+
+      const slot = document.getElementById(drag.config.slot);
+      const distance = Math.hypot(
+        drag.startShapeRect.left + drag.deltaX + drag.startShapeRect.width / 2 - (drag.slotRect.left + drag.slotRect.width / 2),
+        drag.startShapeRect.top + drag.deltaY + drag.startShapeRect.height / 2 - (drag.slotRect.top + drag.slotRect.height / 2)
+      );
+      const isCorrectDrop = drag.moved && event.type !== 'pointercancel' &&
+        distance <= Math.min(drag.slotRect.width, drag.slotRect.height) * 0.24;
+
+      if (isCorrectDrop) {
+        const snapX = drag.slotRect.left + drag.slotRect.width / 2 - (drag.startShapeRect.left + drag.startShapeRect.width / 2);
+        const snapY = drag.slotRect.top + drag.slotRect.height / 2 - (drag.startShapeRect.top + drag.startShapeRect.height / 2);
+        completeFloatingPiece(drag.piece, drag.config, snapX, snapY);
+      } else {
+        slot.classList.remove('is-matching');
+        const origin = floatingPieceOrigins.get(drag.piece);
+        drag.piece.style.transition = 'transform 0.32s var(--ease-spring)';
+        drag.piece.style.setProperty('--drag-x', '0px');
+        drag.piece.style.setProperty('--drag-y', '0px');
+        drag.piece.style.left = `${origin.left}%`;
+        drag.piece.style.top = `${origin.top}%`;
+        drag.piece.style.removeProperty('--piece-tilt');
+      }
+    }
+
+    function completeFloatingPiece(piece, config, snapX, snapY) {
+      if (piece.classList.contains('is-placed')) return;
+      const slot = document.getElementById(config.slot);
+      piece.style.transition = 'transform 0.36s var(--ease-spring)';
+      piece.style.setProperty('--drag-x', `${snapX}px`);
+      piece.style.setProperty('--drag-y', `${snapY}px`);
+      piece.classList.add('is-placed');
+      if (slot) slot.classList.add('is-matching');
+      setTimeout(() => enterPuzzlePage(piece, config), 380);
+    }
+
+    async function enterPuzzlePage(piece, config) {
+      if (isFloatingZooming) return;
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        navigate(config.view);
+        return;
+      }
+      isFloatingZooming = true;
+      const home = document.getElementById('view-home');
+      const source = piece.getBoundingClientRect();
+      const veil = document.createElement('div');
+      veil.className = 'puzzle-transition-veil';
+      const flyer = piece.cloneNode(true);
+      flyer.removeAttribute('id');
+      flyer.querySelectorAll('[id]').forEach(el => el.removeAttribute('id'));
+      flyer.classList.remove('is-placed', 'is-dragging');
+      flyer.classList.add('puzzle-transition-flyer');
+      flyer.setAttribute('aria-hidden', 'true');
+      flyer.style.cssText = `position:fixed;left:${source.left}px;top:${source.top}px;width:${source.width}px;height:${source.height}px;transform:none;transition:none;z-index:302;pointer-events:none;`;
+      document.body.append(veil, flyer);
+      document.body.classList.add('puzzle-page-transition');
+      let leaving;
+      let arriving;
+      try {
+        await new Promise(requestAnimationFrame);
+        const nav = document.querySelector(`.main-nav [data-target="${config.view}"]`);
+        const target = nav.getBoundingClientRect();
+        const scale = Math.min(34 / source.width, 34 / source.height);
+        const dx = target.left + target.width / 2 - source.left - source.width / 2;
+        const dy = target.top + target.height / 2 - source.top - source.height / 2;
+        const flight = flyer.animate([
+          { transform: 'translate(0,0) scale(1)', opacity: 1 },
+          { transform: `translate(${dx * .45}px,${dy * .7}px) scale(.52)`, opacity: 1, offset: .55 },
+          { transform: `translate(${dx}px,${dy}px) scale(${scale})`, opacity: 1, offset: .88 },
+          { transform: `translate(${dx}px,${dy}px) scale(${scale * .8})`, opacity: 0 }
+        ], { duration: 1100, easing: 'cubic-bezier(.4,0,.2,1)', fill: 'forwards' });
+        leaving = home.animate([{ opacity: 1 }, { opacity: 0 }], {
+          duration: 450, delay: 100, easing: 'ease-in', fill: 'forwards'
+        });
+        await leaving.finished;
+        navigate(config.view);
+        const page = document.getElementById(`view-${config.view}`);
+        arriving = page.animate([
+          { opacity: 0, translate: '0 20px' }, { opacity: 1, translate: '0 0' }
+        ], { duration: 650, easing: 'cubic-bezier(.16,1,.3,1)' });
+        await flight.finished;
+        const pieceColor = getComputedStyle(piece).getPropertyValue('--piece-color').trim();
+        nav.animate([
+          { scale: '1', background: 'var(--ink-primary)', color: '#fff' },
+          { scale: '1.1', background: pieceColor, color: '#fff', offset: .18 },
+          { scale: '1.04', background: pieceColor, color: '#fff', offset: .72 },
+          { scale: '1', background: 'var(--ink-primary)', color: '#fff' }
+        ], {
+          duration: 1500, easing: 'ease-in-out'
+        });
+        await arriving.finished;
+      } finally {
+        leaving?.cancel();
+        arriving?.cancel();
+        flyer.remove();
+        veil.remove();
+        document.body.classList.remove('puzzle-page-transition');
+        isFloatingZooming = false;
+      }
+    }
+
+    function onMouseMove(e) {
+      if (!draggedEl) return;
+      const dx = e.clientX - startX;
+      const dy = e.clientY - startY;
+      draggedEl.style.left = (initialLeft + dx) + 'px';
+      draggedEl.style.top = (initialTop + dy) + 'px';
+      draggedEl.style.transform = 'rotate(' + (dx * 0.05 - 5) + 'deg) scale(1.05)';
+      
+      const tidyBtn = document.getElementById('tidyUpBtn');
+      if (tidyBtn) tidyBtn.classList.remove('hidden');
+    }
+
+    function onMouseUp(e) {
+      if (!draggedEl) return;
+      draggedEl.style.transition = 'all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)';
+      draggedEl.style.filter = '';
+      draggedEl.style.zIndex = '15';
+      draggedEl = null;
+      document.removeEventListener('mousemove', onMouseMove);
+      document.removeEventListener('mouseup', onMouseUp);
+    }
+
+    function tidyUpPuzzle() {
+      originalPositions.forEach((pos, el) => {
+        el.style.transition = 'all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        el.style.left = pos.left;
+        el.style.top = pos.top;
+        el.style.transform = pos.transform;
+      });
+      floatingPieceOrigins.forEach((pos, el) => {
+        el.style.transition = 'transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        el.style.setProperty('--drag-x', '0px');
+        el.style.setProperty('--drag-y', '0px');
+        el.style.left = `${pos.left}%`;
+        el.style.top = `${pos.top}%`;
+        el.classList.remove('is-placed', 'is-dragging');
+      });
+      document.querySelectorAll('.puzzle-board-slot.is-matching').forEach(slot => slot.classList.remove('is-matching'));
+      const tidyBtn = document.getElementById('tidyUpBtn');
+      if (tidyBtn) tidyBtn.classList.add('hidden');
+      showToast('🧹 已归位整理 · Tidy up complete!');
+    }
+
+
+    window.addEventListener('DOMContentLoaded', () => {
+      if (!document.querySelector('.hr-home-layout')) initFloatingPiecePuzzle();
+      if (!document.querySelector('.hr-home-layout')) document.fonts.ready.then(() => requestAnimationFrame(scatterHomePieces));
+      initGutFeelingDraggables();
+      renderWorksOverview();
+      renderBackcover();
+    });
+  </script>
+<script src="./assets/about-history-motion.js"></script>
+<script>
+(()=>{const hint=document.querySelector('.about-scroll-hint');const history=document.querySelector('#view-about .about-bottom-stack');if(hint)document.body.appendChild(hint);if(hint&&history)new IntersectionObserver(entries=>{hint.classList.toggle('history-in-view',entries[0].isIntersecting)},{rootMargin:'0px 0px -80px 0px',threshold:0}).observe(history)})();
+</script><script src="./assets/detail-gallery-motion.js"></script>
+<script src="./assets/hr-home-approved.js"></script>
+</body>
+</html>
